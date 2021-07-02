@@ -1,13 +1,13 @@
-Memory Extention for FighterXResource1 (+5,4MB) [Dantarion, ASF1nk, DukeItOut, Grimdeath]
-* 04421B44 00ABE380
-* 04421B64 00ABE380
-* 04422474 00ABE380
-* 04421B84 00ABE380
-* 04421BA4 00ABE380
-* 04421E0C 00ABE380
-* 04421E2C 00ABE380
-* 04421EAC 00ABE380
-* 04421ECC 00ABE380
+Memory Extention for FighterXResource1 (+4,3MB) [Dantarion, ASF1nk, DukeItOut, Grimdeath]
+* 04421B44 009CA140
+* 04421B64 009CA140
+* 04422474 009CA140
+* 04421B84 009CA140
+* 04421BA4 009CA140
+* 04421E0C 009CA140
+* 04421E2C 009CA140
+* 04421EAC 009CA140
+* 04421ECC 009CA140
 
 Memory Extention for FighterXResource2 (+0,27MB) [Dantarion, Grimdeath]
 * 04421B54 000DA920
@@ -22,5 +22,8 @@ Memory Extention for FighterXResource2 (+0,27MB) [Dantarion, Grimdeath]
 Memory Extension for StageResource (+19,4MB) [DukeItOut, Grimdeath]
 * 04421D64 019d6a80
 
-Memory Extension for ItemResource (+2MB) [DukeItOut]
-* 044218FC 005E9000
+Memory Expansion for FighterKirbyResource (+0,15MB) [Glitch, Grimdeath]
+* 08422444 00040000
+* 20020010 00000000
+* 08421b14 00040000
+* 20020010 00000000

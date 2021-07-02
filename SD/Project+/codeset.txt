@@ -56,16 +56,6 @@ Reflect is Bunny 1.1d [wiiztec]
 Poke Balls use Normal Item Limit [standardtoaster]
 * 049B0AC0 60000000
 
-Memory Extention for FighterXResource2 [Dantarion]
-* 04421B54 00091E80
-* 04421B74 00091E80
-* 04421B94 00091E80
-* 04421BB4 00091E80
-* 04421E1C 00091E80
-* 04421E3C 00091E80
-* 04421EBC 00091E80
-* 04421EDC 00091E80
-
 Stage Choice Random Fix [ds22]
 * 04055444 4080014C
 
