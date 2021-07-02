@@ -19,8 +19,8 @@ Memory Extention for FighterXResource2 (+0,27MB) [Dantarion, Grimdeath]
 * 04421EBC 000DA920
 * 04421EDC 000DA920
 
-Memory Extension for StageResource (+6,4MB) [DukeItOut, Grimdeath]
-* 04421D64 00C3EC60
+Memory Extension for StageResource (+19,4MB) [DukeItOut, Grimdeath]
+* 04421D64 019d6a80
 
 Memory Extension for ItemResource (+2MB) [DukeItOut]
 * 044218FC 005E9000
