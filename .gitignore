@@ -8,3 +8,6 @@ Dolphin/User/Wii/sd.raw
 Dolphin/User/Wii/title/00010000/52534245/data/collect.vff
 Dolphin/User/Wii/title/00010000/52534245/data/autosv1.bin
 Dolphin/User/Wii/title/00010000/52534245/data/autosv0.bin
+*.cache
+*.bin
+*.bin
