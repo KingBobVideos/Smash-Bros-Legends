@@ -2,7 +2,12 @@ Dolphin/User/Backup/SYSCONF
 Dolphin/User/Cache/gamelist.cache
 Dolphin/User/Cache/ID-Project+ Offline Launcher.uidcache
 Dolphin/User/Wii/tmp/*
+Dolphin/User/Cache/gamelist.cache
 Dolphin/User/GC/SRAM.raw
+Dolphin/User/Wii/fst.bin
+Dolphin/User/Wii/shared2/sys/SYSCONF
+Dolphin/User/Wii/title/00010000/52534245/data/autosv0.bin
+Dolphin/User/Wii/title/00010000/52534245/data/autosv1.bin
 *.ini
 *.bin
 *.iso
@@ -13,4 +18,4 @@ Dolphin/User/GC/SRAM.raw
 *.txt
 *.bak
 *.vff
-
+*.tmp
