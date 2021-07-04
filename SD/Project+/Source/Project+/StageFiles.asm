@@ -1248,7 +1248,7 @@ CODE @ $800B91C8
 .GOTO->SkipStageTables
 
 TABLE_1:
-	byte[21] |
+	byte[30] |
 0x24, | # Peach's Castle
 0x0E, | # Lylat Cruise
 0x0C, | # Yoshi's Island
@@ -1269,7 +1269,16 @@ TABLE_1:
 0x00, | # Battlefield
 0x28, | # Pokemon Stadium 2
 0x02, | # Delfino's Secret
-0x16  | # Distant Planet
+0x16, | # Distant Planet
+0x39, | # WarioWare, Inc.
+0x3C, | # Poke Floats
+0x34, | # Bell Tower
+0x35, | # Norfair
+0x2F, | # Hanenbow
+0x37, | # Venus Lighthouse
+0x2C, | # Dracula's Castle
+0x30, | # Dead Line
+0x3A  | # Subspace
 
 TABLE_2:
 	byte[21] |
@@ -1296,7 +1305,7 @@ TABLE_2:
 0x1D  | # PictoChat
 
 TABLE_3:
-	byte[17] |
+	byte[8] |
 0x31, | # Dinosaur Land
 0x2D, | # Mario Circuit
 0x38, | # Mushroom Kingdom
@@ -1304,16 +1313,7 @@ TABLE_3:
 0x32, | # Oil Drum Alley
 0x33, | # Jungle Japes
 0x2E, | # Clock Town
-0x36, | # Cookie Country
-0x39, | # WarioWare, Inc.
-0x3C, | # Poke Floats
-0x34, | # Bell Tower
-0x35, | # Norfair
-0x2F, | # Hanenbow
-0x37, | # Venus Lighthouse
-0x2C, | # Dracula's Castle
-0x30, | # Dead Line
-0x3A  | # Subspace
+0x36 | # Cookie Country
 
 TABLE_4:	# Unused
 TABLE_5:	# Unused
@@ -1344,9 +1344,9 @@ half[61] |	# Stage Count + 2
 SkipStageTables:
 .RESET
 
-byte 21 @ $806B929C # Page 1
+byte 30 @ $806B929C # Page 1
 byte 21 @ $806B92A4 # Page 2
-byte 17 @ $80496002 # Page 3
+byte 8 @ $80496002 # Page 3
 byte 00 @ $80496003 # Page 4 (Unused)
 byte 00 @ $80496004 # Page 5 (Unused)
 byte 59 @ $800AF673 # Stage Count
