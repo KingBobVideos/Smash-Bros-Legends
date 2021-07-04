@@ -1,4 +1,8 @@
-Dolphin/User/Wii/title/00010000/52534245/data/collect.vff
+Dolphin/User/Backup/SYSCONF
+Dolphin/User/Cache/gamelist.cache
+Dolphin/User/Cache/ID-Project+ Offline Launcher.uidcache
+Dolphin/User/Wii/tmp/*
+Dolphin/User/GC/SRAM.raw
 *.ini
 *.bin
 *.iso
@@ -6,3 +10,7 @@ Dolphin/User/Wii/title/00010000/52534245/data/collect.vff
 *.uidcache
 *.dat
 *.raw
+*.txt
+*.bak
+*.vff
+
