@@ -13,7 +13,6 @@ Dolphin/User/Wii/title/00010000/52534245/data/autosv1.bin
 *.iso
 *.cache
 *.uidcache
-*.dat
 *.raw
 *.txt
 *.bak
