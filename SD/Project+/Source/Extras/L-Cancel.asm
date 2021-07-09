@@ -268,6 +268,9 @@ applyLCancelRedFlash:
   mflr r11 #Store Link Register in R11
   addi r11, r11, 0x0C
   bl applyFlash
+applyLcancel:
+  lfs f0, -23448(r2)
+  fmuls f30, f30, f0
   li r6, 0
 
 checkForInputBuffer:

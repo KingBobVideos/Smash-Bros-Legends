@@ -18,6 +18,7 @@ op blt- 0x34	   @ $8018CFC8
 .include Source/Project+/PSA.asm
 .include Source/ProjectM/Constants.asm
 .include source/Extras/UltimateShieldCodes.asm
+.include source/Extras/Ledge-Trumping.asm
 .include Source/ProjectM/PSA/Effects.asm
 .include Source/ProjectM/PSA/Misc.asm
 .include Source/ProjectM/PSA/Tethers.asm
