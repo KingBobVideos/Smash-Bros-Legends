@@ -8,6 +8,7 @@ Dolphin/User/Wii/fst.bin
 Dolphin/User/Wii/shared2/sys/SYSCONF
 Dolphin/User/Wii/title/00010000/52534245/data/autosv0.bin
 Dolphin/User/Wii/title/00010000/52534245/data/autosv1.bin
+*.ini
 *.bin
 *.iso
 *.cache
