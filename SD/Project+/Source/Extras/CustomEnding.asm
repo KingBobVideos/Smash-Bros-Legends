@@ -125,8 +125,8 @@ HOOK @ $806C14E8
 SDTHP_NotFound:
 	mr r4, r30 			# Original operation, gets index again for the video
 
-	cmpwi r4, 0x2D; beq- forceBowser   # Giga Bowser plays Bowser's video instead of skipping
-	cmpwi r4, 0x43; beq- forceWario	   # Wario-Man plays Wario's video instead of skipping
+	
+	
 
 	cmpwi r4, 0x15; beq- extraCharFail
 	cmpwi r4, 0x1C; beq- extraCharFail # check for Mewtwo. Remove this line if given a unique cosmetic slot instead of PT's

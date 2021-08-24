@@ -1,4 +1,4 @@
-[Legacy TE] All Star Versus 1.32 LTE [wiiztec] (Knuckles added in [Eon])
+[Legacy TE] All Star Versus 1.32 LTE [wiiztec] (Knuckles added in [Eon], Ridley added in [KingJigglypuff])
 * 4A000000 90000000
 * 08588099 000000FF
 * 000300A0 00000000
@@ -142,7 +142,7 @@ RandomSelect:
   ori r27, r27, 0xFC7C
   mflr r8
   mtctr r27
-  li r3, 0x36 	#set range 0-0x35
+  li r3, 0x39 	#set range 0-0x38
   bctrl 
   mtlr r8
   lmw r9, 8(r1)
@@ -168,6 +168,10 @@ RandomChecks:
   cmpwi r18, 0x31 #if ID is giga bowser, warioman, or alloys rechoose random ID
   ble+ RandomSelect
   cmpwi r18, 0x34 #if ID is 0x34, rechoose random ID.
+  beq RandomSelect
+  cmpwi r18, 0x36 #if ID is 0x36, rechoose random ID.
+  beq RandomSelect
+  cmpwi r18, 0x37 #if ID is 0x37, rechoose random ID.
   beq RandomSelect
 
 end:

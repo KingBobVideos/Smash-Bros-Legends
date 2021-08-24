@@ -326,7 +326,7 @@ HOOK @ $8074D070
   lwz r27, 0x13C(r5)
   addi r27, r27, 0x1		//increment ledge counter
   stw r27, 0x13C(r5)
-  cmpwi r27, 0x5		//if consecutive grab count is >5
+  cmpwi r27, 0x4		//if consecutive grab count is >4
   bgt- tooManyLedgeGrabs	//don't grant invuln
   b ledgeGrabs
 tooManyLedgeGrabs:

@@ -1248,43 +1248,35 @@ CODE @ $800B91C8
 .GOTO->SkipStageTables
 
 TABLE_1:
-	byte[30] |
-0x24, | # Peach's Castle
+	byte[23] |
+0x00, | # Battlefield
+0x01, | # Final Destination
+0x24, | # Peach's Castle 64
+0x06, | # Kongo Jungle
+0x09, | # Hyrule Castle
+0x23, | # Dream Land
+0x3D, | # Mushroom Kingdom 64
+0x04, | # Metal Cavern
 0x0E, | # Lylat Cruise
 0x0C, | # Yoshi's Island
 0x05, | # Bowser's Castle
 0x21, | # Golden Temple
 0x1E, | # Sky Sanctuary Zone
-0x09, | # Hyrule Castle
 0x14, | # Castle Siege
 0x15, | # Wario Land
 0x18, | # Fountain of Dreams
-0x01, | # Final Destination
-0x04, | # Metal Cavern
-0x23, | # Dream Land
 0x0A, | # Metroid Lab
 0x20, | # Yoshi's Story
 0x1C, | # Green Hill Zone
 0x1A, | # Smashville
-0x00, | # Battlefield
 0x28, | # Pokemon Stadium 2
 0x02, | # Delfino's Secret
-0x16, | # Distant Planet
-0x39, | # WarioWare, Inc.
-0x3C, | # Poke Floats
-0x34, | # Bell Tower
-0x35, | # Norfair
-0x2F, | # Hanenbow
-0x37, | # Venus Lighthouse
-0x2C, | # Dracula's Castle
-0x30, | # Dead Line
-0x3A  | # Subspace
+0x16  | # Distant Planet
 
 TABLE_2:
-	byte[21] |
+	byte[20] |
 0x12, | # Infinite Glacier
 0x1B, | # Shadow Moses Island
-0x06, | # Kongo Jungle
 0x19, | # Fourside
 0x22, | # Onett
 0x26, | # Big Blue
@@ -1305,7 +1297,7 @@ TABLE_2:
 0x1D  | # PictoChat
 
 TABLE_3:
-	byte[8] |
+	byte[17] |
 0x31, | # Dinosaur Land
 0x2D, | # Mario Circuit
 0x38, | # Mushroom Kingdom
@@ -1313,7 +1305,16 @@ TABLE_3:
 0x32, | # Oil Drum Alley
 0x33, | # Jungle Japes
 0x2E, | # Clock Town
-0x36 | # Cookie Country
+0x36, | # Cookie Country
+0x39, | # WarioWare, Inc.
+0x3C, | # Poke Floats
+0x34, | # Bell Tower
+0x35, | # Norfair
+0x2F, | # Hanenbow
+0x37, | # Venus Lighthouse
+0x2C, | # Dracula's Castle
+0x30, | # Dead Line
+0x3A  | # Subspace
 
 TABLE_4:	# Unused
 TABLE_5:	# Unused
@@ -1331,25 +1332,25 @@ half[61] |	# Stage Count + 2
 0x1F19, 0x201A, 0x211B, 0x221C, | # Fountain of Dreams, Fourside, Smashville, Shadow Moses Island
 0x231D, 0x241E, 0x4326, 0x2932, | # Green Hill Zone, PictoChat, Sky Sanctuary, Temple
 0x2A33, 0x472A, 0x2C35, 0x2D36, | # Yoshi's Story, Golden Temple, Onett, Dream Land
-0x2F37, 0x3038, 0x3139, 0x323A, | # Rainbow Cruise, Corneria, Big Blue, Brinstar
+0x2F37, 0x3038, 0x3139, 0x323A, | # Peach's Castle 64, Corneria, Big Blue, Brinstar
 0x2E3B, 0xFF64, 0xFF64, 0x373C, | # Pokemon Stadium 2, NOTHING, NOTHING, Training Room
 | # NEW SLOTS
 0x4023, 0x4124, 0x4225, 0x251F, | # Dracula's Castle, Mario Circuit, Clock Town, Hanenbow
 0x4427, 0x4528, 0x4629, 0x2B34, | # Dead Line, Dinosaur Land, Oil Drum Alley, Jungle Japes
 0x482B, 0x0B0B, 0x4A2D, 0x4B2E, | # Bell Tower, Norfair, Cookie Country, Venus Lighthouse
 0x4C2F, 0x4D30, 0x4E31, 0x4F3D, | # Mushroom Kingdom, WarioWare, Subspace, Rainbow Cruise
-0x503E				| # Poke Floats
+0x503E, 0x513F				    | # Poke Floats, Mushroom Kingdom 64
 
 
 SkipStageTables:
 .RESET
 
-byte 30 @ $806B929C # Page 1
-byte 21 @ $806B92A4 # Page 2
-byte 8 @ $80496002 # Page 3
+byte 23 @ $806B929C # Page 1
+byte 20 @ $806B92A4 # Page 2
+byte 17 @ $80496002 # Page 3
 byte 00 @ $80496003 # Page 4 (Unused)
 byte 00 @ $80496004 # Page 5 (Unused)
-byte 59 @ $800AF673 # Stage Count
+byte 61 @ $800AF673 # Stage Count
 
 op lis r4, 0x8049 		@ $800AF58C
 op lwz r4, 0x5D00(r4)	@ $800AF594

@@ -13,7 +13,6 @@
 .include source/Extras/VariableParameter.asm
 .include source/Extras/BigHeadMode.asm
 .include "source/Extras/Input Buffer.asm"
-.include "source/Extras/L-Cancel PreBuffer.asm"
 .include source/Extras/L-Cancel.asm
 .include source/Extras/RandomAngleMode.asm
 .include source/Extras/ScaleModifier.asm
@@ -281,4 +280,105 @@ isNull:
     bctr
 notNull:
     mr r3, r28 #do normal function with raycast
+}
+
+###################################################################################
+Concurrent Infinite Loop accepts int types so you can point to arbitrary code [Eon]
+###################################################################################
+HOOK @ $8077d120
+{
+  cmpwi r0, 0 #if type value just accept it anyways
+  beq %end%
+  cmpwi r0, 2 #pointer default functionality
+}
+
+#######################
+!Raycast debugger [Eon]
+#######################
+#draws the ray you are trying to check for in red, and draws anything the ray comes in contact with in green
+#stRay basic raycast command used for anything that isnt explictly collisions
+HOOK @ $801380EC
+{
+    addi r3, r1, 0xC
+    addi r4, r24, 0x2C
+    lfs f1, 0x0(r4)
+    lfs f2, 0x8(r4)
+    fadds f2, f1, f2
+    stfs f1, 0x0(r3)
+    stfs f2, 0x8(r3)
+    lfs f1, 0x4(r4)
+    lfs f2, 0xC(r4)
+    fadds f2, f1, f2
+    stfs f1, 0x4(r3)
+    stfs f2, 0xC(r3)
+    addi r4, r1, 0x8
+    lis r0, 0xFF00
+    ori r0, r0, 0x00FF
+    stw r0, 0x0(r4)
+    li r5, 0
+    lfs f1, -0x68CC(r2)
+    lis r12, 0x8004
+    ori r12, r12, 0x1104
+    mtctr r12
+    bctrl
+
+
+    lbz r0, 0x12(r24) #orig 
+}
+HOOK @ $80138218
+{
+    addi r3, r1, 0x50
+    stwu r1, -0x10(r1)
+    addi r4, r1, 0x8
+    lis r0, 0x00FF
+    ori r0, r0, 0x00FF
+    stw r0, 0x0(r4)
+    li r5, 0
+    lfs f1, -0x68CC(r2)
+    lis r12, 0x8004
+    ori r12, r12, 0x1104
+    mtctr r12
+    bctrl
+    addi r1, r1, 0x10
+
+
+    lfs f1, 0x8(r1) #orig 
+}
+
+#havok materials #draws same stuff for havok collision checks
+HOOK @ $800869cc
+{
+    stw r0, 0x6C(r1)
+    addi r3, r1, 0x5C
+    stwu r1, -0x10(r1)
+    addi r4, r1, 0x8
+    lis r0, 0xFF00
+    ori r0, r0, 0x00FF
+    stw r0, 0x0(r4)
+    li r5, 0
+    lfs f1, -0x68CC(r2)
+    lis r12, 0x8004
+    ori r12, r12, 0x1104
+    mtctr r12
+    bctrl
+    addi r1, r1, 0x10
+
+}
+HOOK @ $80086a24
+{
+    addi r3, r1, 0x48
+    stwu r1, -0x10(r1)
+    addi r4, r1, 0x8
+    lis r0, 0x00FF
+    ori r0, r0, 0x00FF
+    stw r0, 0x0(r4)
+    li r5, 0
+    lfs f1, -0x68CC(r2)
+    lis r12, 0x8004
+    ori r12, r12, 0x1104
+    mtctr r12
+    bctrl
+    addi r1, r1, 0x10
+
+    cmpwi r29, 0
 }
