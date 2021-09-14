@@ -18,7 +18,6 @@ Dolphin\Sys\GameSettings\*
 *.bak
 *.vff
 *.tmp
-Dolphin/User/Config/Dolphin.ini
 Dolphin/User/Config/Debugger.ini
 Dolphin/User/Config/DSUClient.ini
 Dolphin/User/Config/FreeLook.ini
