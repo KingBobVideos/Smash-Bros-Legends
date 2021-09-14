@@ -8,7 +8,7 @@ Dolphin/User/Wii/fst.bin
 Dolphin/User/Wii/shared2/sys/SYSCONF
 Dolphin/User/Wii/title/00010000/52534245/data/autosv0.bin
 Dolphin/User/Wii/title/00010000/52534245/data/autosv1.bin
-*.ini
+Dolphin\Sys\GameSettings\*
 *.bin
 *.iso
 *.cache
@@ -18,5 +18,12 @@ Dolphin/User/Wii/title/00010000/52534245/data/autosv1.bin
 *.bak
 *.vff
 *.tmp
-*.ini
 Dolphin/User/Config/Dolphin.ini
+Dolphin/User/Config/Debugger.ini
+Dolphin/User/Config/DSUClient.ini
+Dolphin/User/Config/FreeLook.ini
+Dolphin/User/Config/GCKeyNew.ini
+Dolphin/User/Config/GCPadNew.ini
+Dolphin/User/Config/Logger.ini
+Dolphin/User/Config/Qt.ini
+Dolphin/User/Config/WiimoteNew.ini
