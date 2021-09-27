@@ -22,7 +22,7 @@ Load CSPs from RSP files [Phantom Wings, DukeItOut]
 #######################################################################################################
 HOOK @ $80693960
 {
-  cmpwi r24, 4				# \ Optional method to reduce scroll times on the CSS. Requires 4 costumes
+  cmpwi r24, 0				# \ Optional method to reduce scroll times on the CSS. Requires 4 costumes
   blt skipBypass			# / per character to be within selcharacter.pac. The rest will be loaded from RSPs.
   stwu r1, -0x150(r1)		
   addi r11, r1, 0x140		# \

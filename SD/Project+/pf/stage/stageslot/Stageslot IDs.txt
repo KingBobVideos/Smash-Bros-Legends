@@ -64,3 +64,5 @@
 4E - Subspace
 4F - Rainbow Cruise
 50 - Poke Floats
+51 - Dont´use it!!
+52 - Mushroom Kingdom 64

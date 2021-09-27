@@ -1255,7 +1255,7 @@ TABLE_1:
 0x06, | # Kongo Jungle
 0x09, | # Hyrule Castle
 0x23, | # Dream Land
-0x3D, | # Mushroom Kingdom 64
+0x3F, | # Mushroom Kingdom 64
 0x04, | # Metal Cavern
 0x0E, | # Lylat Cruise
 0x0C, | # Yoshi's Island
@@ -1321,7 +1321,7 @@ TABLE_5:	# Unused
 
 TABLE_STAGES:
 # Table of icon<->stage slot associations
-half[61] |	# Stage Count + 2
+half[64] |	# Stage Count + 2
 | # OLD SLOTS
 0x0101, 0x0202, 0x0303, 0x0404, | # Battlefield, Final Destination, Delfino's Secret, Luigi's Mansion
 0x0505, 0x0606, 0x0707, 0x0808, | # Metal Cavern, Bowser's Castle, Kongo Jungle, Rumble Falls
@@ -1339,7 +1339,7 @@ half[61] |	# Stage Count + 2
 0x4427, 0x4528, 0x4629, 0x2B34, | # Dead Line, Dinosaur Land, Oil Drum Alley, Jungle Japes
 0x482B, 0x0B0B, 0x4A2D, 0x4B2E, | # Bell Tower, Norfair, Cookie Country, Venus Lighthouse
 0x4C2F, 0x4D30, 0x4E31, 0x4F3D, | # Mushroom Kingdom, WarioWare, Subspace, Rainbow Cruise
-0x503E, 0x513F				    | # Poke Floats, Mushroom Kingdom 64
+0x503E, 0x513F,	0x5240, 0x5341,	| # Poke Floats, Mushroom Kingdom 64
 
 
 SkipStageTables:
