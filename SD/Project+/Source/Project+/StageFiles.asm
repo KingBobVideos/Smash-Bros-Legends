@@ -1248,7 +1248,7 @@ CODE @ $800B91C8
 .GOTO->SkipStageTables
 
 TABLE_1:
-	byte[23] |
+	byte[26] |
 0x00, | # Battlefield
 0x01, | # Final Destination
 0x24, | # Peach's Castle 64
@@ -1271,7 +1271,10 @@ TABLE_1:
 0x1A, | # Smashville
 0x28, | # Pokemon Stadium 2
 0x02, | # Delfino's Secret
-0x16  | # Distant Planet
+0x16, | # Distant Planet
+0x3C, | # TEMP
+0x3D, | # TEMP
+0x3E  | # TEMP
 
 TABLE_2:
 	byte[20] |
@@ -1321,7 +1324,7 @@ TABLE_5:	# Unused
 
 TABLE_STAGES:
 # Table of icon<->stage slot associations
-half[64] |	# Stage Count + 2
+half[65] |	# Stage Count + 2
 | # OLD SLOTS
 0x0101, 0x0202, 0x0303, 0x0404, | # Battlefield, Final Destination, Delfino's Secret, Luigi's Mansion
 0x0505, 0x0606, 0x0707, 0x0808, | # Metal Cavern, Bowser's Castle, Kongo Jungle, Rumble Falls
@@ -1339,18 +1342,19 @@ half[64] |	# Stage Count + 2
 0x4427, 0x4528, 0x4629, 0x2B34, | # Dead Line, Dinosaur Land, Oil Drum Alley, Jungle Japes
 0x482B, 0x0B0B, 0x4A2D, 0x4B2E, | # Bell Tower, Norfair, Cookie Country, Venus Lighthouse
 0x4C2F, 0x4D30, 0x4E31, 0x4F3D, | # Mushroom Kingdom, WarioWare, Subspace, Rainbow Cruise
-0x503E, 0x513F,	0x5240, 0x5341,	| # Poke Floats, Mushroom Kingdom 64
+0x503E, 0x513F,	0x5240, 0x5341,	| # Poke Floats, Mushroom Kingdom 64, TEMP, TEMP
+0x5442, 												| # TEMP
 
 
 SkipStageTables:
 .RESET
 
-byte 23 @ $806B929C # Page 1
+byte 26 @ $806B929C # Page 1
 byte 20 @ $806B92A4 # Page 2
 byte 17 @ $80496002 # Page 3
 byte 00 @ $80496003 # Page 4 (Unused)
 byte 00 @ $80496004 # Page 5 (Unused)
-byte 61 @ $800AF673 # Stage Count
+byte 63 @ $800AF673 # Stage Count
 
 op lis r4, 0x8049 		@ $800AF58C
 op lwz r4, 0x5D00(r4)	@ $800AF594
