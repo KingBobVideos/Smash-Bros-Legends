@@ -64,5 +64,34 @@
 4E - Subspace
 4F - Rainbow Cruise
 50 - Poke Floats
-51 - Dont´use it!!
-52 - Mushroom Kingdom 64
+51 - Mushroom Kingdom 64
+52 - TEMP
+53 - TEMP
+54 - TEMP
+55 - TEMP
+56 - TEMP
+57 - TEMP
+58 - TEMP
+59 - TEMP
+5A - TEMP
+5B - TEMP
+5C - TEMP
+5D - TEMP
+5E - TEMP
+5F - TEMP
+60 - TEMP
+61 - TEMP
+62 - TEMP
+63 - TEMP
+64 - TEMP
+65 - TEMP
+66 - TEMP
+67 - TEMP
+68 - TEMP
+69 - TEMP
+6A - TEMP
+6B - TEMP
+6C - TEMP
+6D - TEMP
+6E - TEMP
+6F - TEMP

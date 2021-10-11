@@ -1248,7 +1248,7 @@ CODE @ $800B91C8
 .GOTO->SkipStageTables
 
 TABLE_1:
-	byte[26] |
+	byte[30] |
 0x00, | # Battlefield
 0x01, | # Final Destination
 0x24, | # Peach's Castle 64
@@ -1274,10 +1274,14 @@ TABLE_1:
 0x16, | # Distant Planet
 0x3C, | # TEMP
 0x3D, | # TEMP
-0x3E  | # TEMP
+0x3E, | # TEMP
+0x40, | # TEMP
+0x41, | # TEMP
+0x42, | # TEMP
+0x43  | # TEMP
 
 TABLE_2:
-	byte[20] |
+	byte[30] |
 0x12, | # Infinite Glacier
 0x1B, | # Shadow Moses Island
 0x19, | # Fourside
@@ -1297,10 +1301,20 @@ TABLE_2:
 0x0D, | # Halberd
 0x0B, | # Frigate Orpheon
 0x17, | # Skyworld
-0x1D  | # PictoChat
+0x1D, | # PictoChat
+0x44, | # TEMP
+0x45, | # TEMP
+0x46, | # TEMP
+0x44, | # TEMP
+0x45, | # TEMP
+0x46, | # TEMP
+0x47, | # TEMP
+0x48, | # TEMP
+0x49, | # TEMP
+0x4A  | # TEMP
 
 TABLE_3:
-	byte[17] |
+	byte[30] |
 0x31, | # Dinosaur Land
 0x2D, | # Mario Circuit
 0x38, | # Mushroom Kingdom
@@ -1317,14 +1331,27 @@ TABLE_3:
 0x37, | # Venus Lighthouse
 0x2C, | # Dracula's Castle
 0x30, | # Dead Line
-0x3A  | # Subspace
+0x3A, | # Subspace
+0x4C, | # TEMP
+0x4D, | # TEMP
+0x4E, | # TEMP
+0x4F, | # TEMP
+0x50, | # TEMP
+0x51, | # TEMP
+0x52, | # TEMP
+0x53, | # TEMP
+0x54, | # TEMP
+0x55, | # TEMP
+0x56, | # TEMP
+0x57, | # TEMP
+0x58  | # TEMP
 
 TABLE_4:	# Unused
 TABLE_5:	# Unused
 
 TABLE_STAGES:
 # Table of icon<->stage slot associations
-half[65] |	# Stage Count + 2
+half[92] |	# Stage Count + 2
 | # OLD SLOTS
 0x0101, 0x0202, 0x0303, 0x0404, | # Battlefield, Final Destination, Delfino's Secret, Luigi's Mansion
 0x0505, 0x0606, 0x0707, 0x0808, | # Metal Cavern, Bowser's Castle, Kongo Jungle, Rumble Falls
@@ -1343,18 +1370,24 @@ half[65] |	# Stage Count + 2
 0x482B, 0x0B0B, 0x4A2D, 0x4B2E, | # Bell Tower, Norfair, Cookie Country, Venus Lighthouse
 0x4C2F, 0x4D30, 0x4E31, 0x4F3D, | # Mushroom Kingdom, WarioWare, Subspace, Rainbow Cruise
 0x503E, 0x513F,	0x5240, 0x5341,	| # Poke Floats, Mushroom Kingdom 64, TEMP, TEMP
-0x5442, 												| # TEMP
+0x5442, 0x5543, 0x5644, 0x5745,	| # TEMP, TEMP, TEMP, TEMP
+0x5846, 0x5947, 0x5A48, 0x5B49,	| # TEMP, TEMP, TEMP, TEMP
+0x5C4A, 0x5D4B, 0x5E4C, 0x5F4D,	| # TEMP, TEMP, TEMP, TEMP
+0x604E, 0x614F, 0x6250, 0x6351,	| # TEMP, TEMP, TEMP, TEMP
+0x6452, 0x6553, 0x6654, 0x6755,	| # TEMP, TEMP, TEMP, TEMP
+0x6856, 0x6957, 0x6A58, 0x6B59,	| # TEMP, TEMP, TEMP, TEMP
+0x6C5A, 0x6D5B, 0x6E5C, 0x6F5D,	| # TEMP, TEMP, TEMP, TEMP
 
 
 SkipStageTables:
 .RESET
 
-byte 26 @ $806B929C # Page 1
-byte 20 @ $806B92A4 # Page 2
-byte 17 @ $80496002 # Page 3
+byte 30 @ $806B929C # Page 1
+byte 30 @ $806B92A4 # Page 2
+byte 30 @ $80496002 # Page 3
 byte 00 @ $80496003 # Page 4 (Unused)
 byte 00 @ $80496004 # Page 5 (Unused)
-byte 63 @ $800AF673 # Stage Count
+byte 90 @ $800AF673 # Stage Count
 
 op lis r4, 0x8049 		@ $800AF58C
 op lwz r4, 0x5D00(r4)	@ $800AF594
