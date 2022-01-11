@@ -27,3 +27,10 @@ Memory Expansion for FighterKirbyResource (+0,15MB) [Glitch, Grimdeath]
 * 20020010 00000000
 * 08421b14 00040000
 * 20020010 00000000
+
+Memory Expansion for FighterTechqniq (+1,34MB) [Glitch, Grimdeath]
+* 04421bc4 00260000
+
+Memory Expansion for FighterEffect (+0,37MB) [Glitch, Grimdeath]
+* 04422434 00080000
+* 04421b04 00080000
