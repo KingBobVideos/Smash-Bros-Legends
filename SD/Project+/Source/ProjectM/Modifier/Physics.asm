@@ -25,7 +25,7 @@ HOOK @ $8085765C
   li r4, 0x4
   divw r12, r12, r4
   lis r4, 0x8058
-  ori r4, r4, 0x5380
+  ori r4, r4, 0x5270
   mulli r5, r31, 0x4
   lwzx r4, r4, r5
   lis r0, 0x9340;  cmpw r4, r0;  bgelr
@@ -76,7 +76,7 @@ CODE @ $8058549C
 loc_0x18:
   lwz r30, 0x14(r30)
   lhz r30, 0x5A(r30);  ori r30, r30, 0x8000
-  lis r25, 0x8058;  ori r25, r25, 0x5380
+  lis r25, 0x8058;  ori r25, r25, 0x5270
   mulli r26, r27, 0x4
   lwzx r25, r25, r26
   lis r24, 0x9340;  cmpw r25, r24;  bgelr- 
@@ -212,7 +212,7 @@ PULSE
   stwu r1, -0x20(r1)
   stmw r26, 8(r1)
   lis r31, 0x901B;  ori r31, r31, 0x4000	# Pointer to table, below
-  lis r30, 0x8058;  ori r30, r30, 0x5380
+  lis r30, 0x8058;  ori r30, r30, 0x5270
   lwz r26, 0(r31);  cmpwi r26, 0x0;  ble- loc_0x50
   srawi r26, r26, 24
 
@@ -237,7 +237,7 @@ int 2 @ $805A91F8
 Custom Physics Data
 * 205A91F8 00000000
 * 4A000000 90000000
-* 161B4000 000002E8
+* 161B4000 0000030A
 * 00060004 3EC28F5C
 * 01060004 3EA8F5C3
 * 02060004 3F147AE1
@@ -331,5 +331,10 @@ Custom Physics Data
 * 2F060004 3E8F5C29
 * 2F060008 3E333333
 * 2F080003 40200000
+* 00000000 00000000
+* 492F4000 3F024B11
+* 50007914 7A297B00
+* 7C025318 7D234107
+* FFFF0000 00000000
 * 045A91F8 00000001
 * E0000000 80008000
