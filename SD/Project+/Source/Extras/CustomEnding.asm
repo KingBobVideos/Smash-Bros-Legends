@@ -71,20 +71,19 @@ HOOK @ $806C14E8
 	ori r5, r5, 0x14AC		# |
 	stw r5, 0x1524(r12)		# / 
 
-
-    lis r5, 0x817D            # \ Internal BrawlEX character slot info
-    ori r5, r5, 0x52A0        # /
+	lis r5, 0x817D			# \ Internal BrawlEX cosmetic slot info (817D5AC0)
+	ori r5, r5, 0x5AC2		# / the third byte (0x02) within the 16-byte wide block is the primary character slot
     andi. r4, r0, 0xFFFF    # Filter to get character ID
-    mulli r4, r4, 0x10        # Offsets are 0x10 apart
-    lbzx r4, r5, r4            # 817D52A0 + x*0x10
-    lis r5, 0x817C            # \ Internal BrawlEX fighter slot
-    ori r5, r5, 0x8680        # /
-    mulli r4, r4, 0x10        # Offsets are 0x10 apart
-    lwzx r4, r5, r4            # 817C8680 + x*0x10, gets the first [default] fighter slot
-    lis r5, 0x817C            # \ Internal BrawlEX filenames
-    ori r5, r5, 0xD820        # /
-    mulli r4, r4, 0x10        # Offsets are 0x10 apart
-    add r4, r5, r4            # r4 now contains a pointer to the character filename when using P+EX
+    mulli r4, r4, 0x10      # Offsets are 0x10 apart
+	lbzx r4, r5, r4			# Fighter to get primary character slot ID
+    lis r5, 0x817C          # \ Internal BrawlEX fighter slot info 
+    ori r5, r5, 0x8680      # /		
+    mulli r4, r4, 0x10      # Offsets are 0x10 apart
+	lwzx r4, r5, r4			# Fighter slot ID
+    lis r5, 0x817C          # \ Internal BrawlEX internal fighter names
+    ori r5, r5, 0xD820      # /	
+    mulli r4, r4, 0x10      # Offsets are 0x10 apart
+    add r4, r5, r4          # r4 now contains a pointer to the character filename when using P+EX
 	
 	addi r3, r3, 0x87		# \ (0x4C + 0x30 + 0xB to replace "Mario.thp")
 	lis r12, 0x803F			# | copy the character name
@@ -126,7 +125,8 @@ SDTHP_NotFound:
 	mr r4, r30 			# Original operation, gets index again for the video
 
 	
-	
+	cmpwi r4, 0x2D; beq- forceBowser   # Giga Bowser plays Bowser's video instead of skipping
+    cmpwi r4, 0x43; beq- forceWario    # Wario-Man plays Wario's video instead of skipping	
 
 	cmpwi r4, 0x15; beq- extraCharFail
 	cmpwi r4, 0x1C; beq- extraCharFail # check for Mewtwo. Remove this line if given a unique cosmetic slot instead of PT's
@@ -155,6 +155,16 @@ forceWario:
 BrawlVideoBehavior:		
 	lwz r3, 0x14AC(r31) # restore r3
 }
+
+#######################################################
+Independent Pokemon Custom Video/Ending Fix [DukeItOut]
+#######################################################
+# Squirtle, Ivysaur and Charizard load their own ending 
+#   scenes instead of Pokemon Trainer's, which is 
+#   currently occupied by Mewtwo
+#######################################################
+op b 0x14 @ $806E09CC
+op b 0x14 @ $806E369C
 
 ###################################################################
 BrawlEx Classic/All-Star Configurable Ending Skip [Desi, DukeItOut]
