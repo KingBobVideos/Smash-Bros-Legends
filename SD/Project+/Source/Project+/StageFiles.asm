@@ -1261,7 +1261,7 @@ TABLE_1:
 0x0F, | # Saffron City
 0x3F, | # Mushroom Kingdom 64
 0x21, | # The Beginning
-0x04, | # Metal Cavern
+0x49, | # Metal Cavern
 0x14, | # Peach's Castle
 0x3B, | # Rainbow Cruise
 0x18, | # Kongo Falls
@@ -1283,15 +1283,15 @@ TABLE_1:
 TABLE_2:
 	byte[30] |
 0x12, | # Mushroom Kingdom Melee
-0x44, | # TEMP
-0x42, | # TEMP
+0x44, | # Mushroom Kingdom II
+0x42, | # Mute City
 0x26, | # Big Blue
 0x4B, | # Poke Floats
-0x2B, | # Training Room
-0x13, | # Flat Zone 2
-0x45, | # TEMP
+0x2B, | # Delfino Plaza
+0x13, | # Mushroomy Kingdom
+0x45, | # Mario Circuit
 0x39, | # WarioWare, Inc.
-0x47, | # TEMP
+0x47, | # Bridge of Eldin
 0x35, | # Norfair
 0x0B, | # Frigate Orpheon
 0x0C, | # Yoshi's Island
@@ -1299,18 +1299,18 @@ TABLE_2:
 0x0E, | # Lylat Cruise
 0x28, | # Pokemon Stadium 2
 0x11, | # Port Town Aero Dive
-0x46, | # TEMP
-0x59, | # TEMP
+0x46, | # Castle Siege
+0x59, | # Distant Planet
 0x1A, | # Smashville
-0x5A, | # TEMP
-0x5B, | # TEMP
-0x17, | # Skyworld
-0x1B, | # Shadow Moses Island
+0x5A, | # New Pork City
+0x5B, | # Summit
+0x17, | # Sky World
+0x1B, | # Shadow Moses Island 
 0x03, | # Luigi's Mansion
 0x08, | # Pirate Ship
 0x10, | # Spear Pillar
-0x48, | # TEMP
-0x49, | # TEMP
+0x48, | # 75M
+0x04, | # Mario Bros.
 0x2F  | # Hanenbow
 
 TABLE_3:
