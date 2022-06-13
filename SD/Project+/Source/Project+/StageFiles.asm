@@ -1316,34 +1316,34 @@ TABLE_2:
 TABLE_3:
 	byte[30] |
 0x1C, | # Green Hill Zone
-0x2D, | # Mario Circuit
-0x38, | # Mushroom Kingdom
-0x15, | # Wario Land
-0x32, | # Oil Drum Alley
-0x0A, | # Metroid Lab
-0x2E, | # Clock Town
-0x36, | # Cookie Country
-0x07, | # Rumble Falls
-0x41, | # TEMP
-0x34, | # Bell Tower
-0x1D, | # PictoChat
-0x4A, | # TEMP
-0x37, | # Venus Lighthouse
-0x2C, | # Dracula's Castle
-0x30, | # Dead Line
-0x3A, | # Subspace
-0x4C, | # TEMP
-0x4D, | # TEMP
-0x4E, | # TEMP
-0x4F, | # TEMP
-0x50, | # TEMP
-0x51, | # TEMP
-0x52, | # TEMP
-0x53, | # TEMP
-0x54, | # TEMP
-0x55, | # TEMP
-0x56, | # TEMP
-0x57, | # TEMP
+0x2D, | # Mushroom Kingdom U
+0x38, | # Gerudo Valley
+0x15, | # Woolly World
+0x32, | # Magicant
+0x0A, | # Arena Ferox
+0x2E, | # Gateway Galaxy
+0x36, | # Skyloft
+0x07, | # The Great Cave Offensive
+0x41, | # Kalos Pokemon League
+0x34, | # Flat Zone 2
+0x1D, | # Punch Out
+0x4A, | # Gaur Plains
+0x37, | # Duck Hunt
+0x2C, | # Wrecking Crew
+0x30, | # Windy Hill Zone
+0x3A, | # Wily's Castle
+0x4C, | # Suzaku Castle
+0x4D, | # Midgar
+0x4E, | # 3D Land
+0x4F, | # Golden Plains
+0x50, | # Rainbow Road
+0x51, | # Palutena's Temple
+0x52, | # Tortimer Island
+0x53, | # Balloon Fight
+0x54, | # Find Mii
+0x55, | # Pac Maze
+0x56, | # Jungle Hijinx
+0x57, | # Pyrosphere
 0x58  | # Coliseum
 
 TABLE_4:	# Unused
@@ -1374,7 +1374,7 @@ half[92] |	# Stage Count + 2
 0x5846, 0x4124, 0x1915, 0x5B49,	| # Mushroom Kingdom 2, Mario Circuit, Castle Siege, Bridge of Eldin
 0x5C4A, 0x5D4B, 0x5E4C, 0x5F4D,	| # 75M, Metal Cavern, Gaur Plains, Poke Floats
 0x604E, 0x614F, 0x6250, 0x6351,	| # Suzaku Castle, Midgar, 3D Land, Golden Plains
-0x6452, 0x6553, 0x6654, 0x6755,	| # Rainbow Roads, Palutenas Temple, Tortimer Island, Balloon Fight
+0x6452, 0x6553, 0x6654, 0x6755,	| # Rainbow Road, Palutenas Temple, Tortimer Island, Balloon Fight
 0x6856, 0x6957, 0x6A58, 0x6B59,	| # Find Mii, Pac Maze, Jungle Hijinx, Pyrosphere
 0x6C5A, 0x6D5B, 0x6E5C, 0x6F5D,	| # Coliseum, Distant Planet, New Pork City, Summit
 
