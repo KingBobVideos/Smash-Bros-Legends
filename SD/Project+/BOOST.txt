@@ -40,7 +40,7 @@ op blt- 0x34	   @ $8018CFC8
 .include Source/Project+/AirDodge.asm
 .include source/Extras/PlatformIgnore.asm
 .include source/Legends/PSAFixes.asm
-.include source/Legends/PSAL.asm
+.include source/Legends/LegendsPSA.asm
 .include source/Legends/Menu.asm
 .include source/Extras/CostumeAddition.asm
 .include source/Legends/PointerWizardry.asm

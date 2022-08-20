@@ -37,3 +37,45 @@ HOOK @ $807A55F0
     bctrl
     li r3, 1
 }
+
+#######################################################################
+Dedede Clones Fix [MarioDox]
+#######################################################################
+.Macro DededeFix(<CloneID>)
+{
+  cmpwi r3, <CloneID>
+  beq %END%
+}
+
+HOOK @ $80aa1544
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $80aa0af0
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $80aa0d4c
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088f768
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088e758
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088f120
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088fa50
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $80890050
+{
+  %DededeFix(0x20) //Dedede
+}
