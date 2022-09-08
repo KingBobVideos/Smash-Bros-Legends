@@ -34,3 +34,6 @@ Memory Expansion for FighterTechqniq (+1,34MB) [Glitch, Grimdeath]
 Memory Expansion for FighterEffect (+0,37MB) [Glitch, Grimdeath]
 * 04422434 00080000
 * 04421b04 00080000
+
+Memory Extension for ItemResource (+2MB) [DukeItOut]
+* 044218FC 006DD240
