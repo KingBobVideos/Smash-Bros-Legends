@@ -43,10 +43,11 @@ op blt- 0x34	   @ $8018CFC8
 .include source/Extras/PlatformIgnore.asm
 .include source/Legends/PSAFixes.asm
 .include source/Legends/LegendsPSA.asm
+.include source/Legends/PassiveAnim.asm
 .include source/Legends/Menu.asm
 .include source/Extras/CostumeAddition.asm
 .include source/Legends/PointerWizardry.asm
-.include source/Legends/Subspace.asm
+#.include source/Legends/Subspace.asm
 
 .include Source/Extras/Console.asm	# Only use this on a Wii or Wii U! The codes in this are necessary for the slower specifications of the actual console.
 #.include Source/Extras/Netplay.asm	# Only use this in Dolphin! The codes in this will result in bad behavior on the Wii!

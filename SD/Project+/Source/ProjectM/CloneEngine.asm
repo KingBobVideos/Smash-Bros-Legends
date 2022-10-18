@@ -7,7 +7,7 @@ half[2] 0x2C0B, 0x3068 @ $80B2DD3C
 half[2] 0x2D11, 0x356F @ $80B2DD40
 byte[24] |
 0x32, 0x1D, 0x24, 0x21, |
-0x33, 0x1C, 0x1B, 0x4B, |
+0x33, 0x1C, 0x2D, 0x4B, |
 0x34, 0x13, 0x2E, 0x2D, |
 0x35, 0x22, 0x2F, 0x5B, |
 0x36, 0x0B, 0x0B, 0x17, |
@@ -31,7 +31,6 @@ HOOK @ $80952F38
 {
     %StockException (0x38, 0x32)    #Ridley
     %StockException (0x39, 0x33)    #Waluigi
-	%StockException (0x40, 0x40)    #Dark Samus
     mr r0, r4                        #BrawlEX Corps Fix v1 [ds22]
     b %END%
 }
@@ -89,7 +88,7 @@ Lucario Clone Aura Sphere GFX Fix [Dantarion, ds22, DesiacX]
 }
 HOOK @ $80AA95B8    #Uses Fighter ID followed by Effect.pac ID
 {
-    %GFXFix (0x26, 0x8F)    #Mewtwo
+    %GFXFix (0x26, 0x27)    #Mewtwo
 	%GFXFix (0x2A, 0x187)   #Ridley
     lis r3, 0x22            #If no fix is specified, use Lucario's
 }
@@ -185,68 +184,510 @@ Lyn Fixes [ds22]
 * 04853A8C 40800014
 * 04853B24 40800014
 
-###################################
-Samus Clone Charge Shot setup [Eon]
-###################################
+#####################################################
+Samus Clone Charge Shot GFX Fix [Eon, KingJigglypuff]
+#####################################################
+.macro GFXFix(<FighterID>, <Effect.pacID>)
+{
+    cmpwi r3, <FighterID>
+    bne 0x0C
+    lis r4, <Effect.pacID>
+    b end
+}
 op cmpwi r3, 5 @ $80A0AA5C
 op beq 0x78 @ $80A0AA60
-#Samus clone gfx pac id changing
 HOOK @ $80A0AAA8
 {
-#get Char ID
-  lwz r3, 0xD8(r31)
-  lwz r3, 0x64(r3)
-  lis r4, 0x1000
-  addi r4, r4, 7
-  lwz r12, 0x0(r3)
-  lwz r12, 0x18(r12)
-  mtctr r12
-  bctrl 
-samusClones:
-  cmpwi r3, -1 #if char id = -1
-  bne 0xC
-  lis r4, 0xFFF #effect pac = 0xFFF
-  b end
-samusDefault:
-  lis r4, 0x0004
-
+	lwz r3, 0xD8(r31)			#\
+	lwz r3, 0x64(r3)			#|
+	lis r4, 0x1000				#|
+	addi r4, r4, 7				#| This entire sequence grabs the Fighter ID.
+	lwz r12, 0x0(r3)			#|
+	lwz r12, 0x18(r12)			#|
+	mtctr r12					#|
+	bctrl 						#/
+FighterIDCheck:
+    %GFXFix(0x69, 0x169)		#Samus Clone Test, ef_custom32
+    lis r4, 0x04				#If not defined, use ef_samus
 end:
-  lwz r12, 0x0(r30)
+	lwz r12, 0x0(r30)
 }
-#kirby samus hat clone gfx pac id changing
+
+##########################################################################
+Kirby Samus Clone Charge Shot GFX Fix [ds22, DesiacX, Eon, KingJigglypuff]
+##########################################################################
+.macro GFXFix(<FighterID>,<Effect.pacID>)
+{
+    cmpwi r3, <FighterID>
+    bne 0xC
+    lis r4, <Effect.pacID>
+    b end
+}
 HOOK @ $80A0AB1C
 {
-#get link parent[3] (aka shooter)
-  lwz r3, 0xD8(r31)
-  lwz r3, 0x54(r3)
-  li r4, 3
-  lwz r12, 0x0(r3)
-  lwz r12, 0x34(r12)
-  mtctr r12
-  bctrl 
-#get Kirby LA-Basic[72] (hat id)
-  lwz r3, 0x60(r3)
-  lwz r3, 0xD8(r3)
-  lwz r3, 0x64(r3)
-  lis r4, 0x1000
-  addi r4, r4, 72
-  lwz r12, 0x0(r3)
-  lwz r12, 0x18(r12)
-  mtctr r12
-  bctrl 
-samusClones:
-  cmpwi r3, 64 #if char id = -1
-  bne 0xC
-  lis r4, 0x95 #effect pac = 0xFFF
-  b end
-samusDefault:
-  lis r4, 0x0108
-
+	lwz r3, 0xD8(r31)				#\
+	lwz r3, 0x54(r3)				#|
+	li r4, 3						#|
+	lwz r12, 0x0(r3)				#| Get Link Parent[3] (IE: Who owns the projectile)
+	lwz r12, 0x34(r12)				#|
+	mtctr r12						#|
+	bctrl 							#/
+	lwz r3, 0x60(r3)				#\
+	lwz r3, 0xD8(r3)				#|
+	lwz r3, 0x64(r3)				#|
+	lis r4, 0x1000					#|
+	addi r4, r4, 72					#| Get Kirby's LA-Basic[72] (Hat ID)
+	lwz r12, 0x0(r3)				#|
+	lwz r12, 0x18(r12)				#|
+	mtctr r12						#|
+	bctrl 							#/
+HatIDCheck:
+    %GFXFix(0x40, 0x95)				#Dark Samus, ef_tautau
+    lis r4, 0x108					#If not defined, use ef_KbSamus
 end:
-  lwz r12, 0x0(r30)
+	lwz r12, 0x0(r30)
 }
 
-.include source/Extras/KirbyHatEx.asm
+##################################################
+Jigglypuff Clone Rollout Bone Fix [codes, DesiacX]
+##################################################
+.Macro CloneBones(<CloneID>,<BoneID>,<WriteRegister>)
+{
+  cmpwi r3, <CloneID>
+  bne+ 0x8
+  li <WriteRegister>, <BoneID>
+}
+
+################
+HOOK @ $80AC9F9C
+{
+    %CloneBones(0x6D, 0x7, r28)	#Green Alloy
+    lwz r4, 216(r30)
+}
+################
+HOOK @ $80ACA3A4
+{
+    %CloneBones(0x6D, 0x7, r27)	#Green Alloy  
+    lwz r4, 216(r28)
+}
+################
+HOOK @ $80ACA414
+{
+    %CloneBones(0x6D, 0x7, r27)	#Green Alloy
+    lwz r4, 216(r28)
+}
+################
+HOOK @ $80ACA7E8
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80ACA858
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80ACAC2C
+{
+    %CloneBones(0x6D, 0x7, r28)	#Green Alloy    
+    lwz r4, 216(r30)
+
+}
+################
+HOOK @ $80ACB050
+{
+    %CloneBones(0x6D, 0x7, r27)	#Green Alloy    
+    lwz r4, 216(r28)
+}
+################
+HOOK @ $80ACB0c0
+{
+    %CloneBones(0x6D, 0x7, r27)	#Green Alloy    
+    lwz r4, 216(r28)
+}
+################
+HOOK @ $80ACB6A0
+{
+    %CloneBones(0x6D, 0x9, r5)	#Green Alloy
+    lfs f0, 4(r31)
+}
+################
+HOOK @ $80ACB7BC
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80ACB81C
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80ACBE9C
+{
+    %CloneBones(0x6D, 0x7, r28)	#Green Alloy    
+    lwz r4, 216(r30)
+}
+################
+op NOP @ $80ACC0B8
+################
+HOOK @ $80ACC0C4
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+HOOK @ $80ACC9C4
+{
+    %CloneBones(0x6D, 0x7, r27)	#Green Alloy    
+    lwz r4, 216(r28)
+}
+################
+HOOK @ $80ACCA34
+{
+    %CloneBones(0x6D, 0x7, r26)	#Green Alloy    
+    lwz r4, 216(r28)
+}
+################
+HOOK @ $80ACD178
+{
+    %CloneBones(0x6D, 0x9, r28)	#Green Alloy    
+    lwz r3, 216(r30)
+}
+################
+HOOK @ $80ACD53C
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80ACD5AC
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80ACD93C
+{
+    %CloneBones(0x6D, 0x7, r30)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+op NOP @ $80ACDB54
+################
+HOOK @ $80ACDB60
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+HOOK @ $80ACE580
+{
+    %CloneBones(0x6D, 0x7, r28)	#Green Alloy    
+    lwz r4, 216(r27)
+}
+################
+HOOK @ $80ACE5F0
+{
+    %CloneBones(0x6D, 0x7, r26)	#Green Alloy    
+    lwz r4, 216(r27)
+}
+################
+HOOK @ $80ACEBF0
+{
+    %CloneBones(0x6D, 0x7, r29)	#Green Alloy    
+    lwz r4, 216(r30)
+}
+################
+HOOK @ $80ACEDF4
+{
+    %CloneBones(0x6D, 0x9, r28)	#Green Alloy    
+    lwz r3, 216(r30)
+}
+################
+op NOP @ $80ACF8A4
+################
+HOOK @ $80ACF8B0
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+HOOK @ $80ACFCD4
+{
+    %CloneBones(0x6D, 0x7, r25)	#Green Alloy    
+    lwz r4, 216(r27)
+}
+################
+HOOK @ $80ACFD94
+{
+    %CloneBones(0x6D, 0x7, r26)	#Green Alloy    
+    lwz r4, 216(r27)
+}
+################
+HOOK @ $80AD02C8
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80AD0338
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+op NOP @ $80AD0AD4
+################
+HOOK @ $80AD0AE0
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+CODE @ $80AD0B14
+{
+    nop 
+    nop 
+    nop 
+}
+################
+#Yes, this is the only one that checks for Jigglypuff.
+HOOK @ $80AD0B20
+{
+    %CloneBones(0x25, 0x197, r28)	#Jigglypuff
+    %CloneBones(0x6D, 0x7, r28)	    #Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+op NOP @ $80AD0B50
+################
+HOOK @ $80AD0B5C
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+op NOP @ $80AD0D88
+################
+HOOK @ $80AD0D94
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+op NOP @ $80AD13F8
+################
+HOOK @ $80AD1404
+{
+    %CloneBones(0x6D, 0x6, r4)	#Green Alloy    
+    lwz r3, 4(r5)
+    lwz r12, 8(r3)
+}
+################
+HOOK @ $80AD1628
+{
+    %CloneBones(0x6D, 0x7, r28)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80AD1698
+{
+    %CloneBones(0x6D, 0x7, r28)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80AD17D8
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+################
+HOOK @ $80AD1848
+{
+    %CloneBones(0x6D, 0x7, r31)	#Green Alloy    
+    lwz r4, 216(r29)
+}
+############################################################
+Jigglypuff Clone Rollout Max Charge GFX Fix [Codes, DesiacX]
+############################################################
+.Macro CloneGFX(<CloneID>,<GFXID>,<GFXID2>,<WriteRegister>)
+{
+  cmpwi r3, <CloneID>
+  bne+ 0xC
+  lis <WriteRegister>, <GFXID>
+  addi <WriteRegister>, <WriteRegister>, <GFXID2>
+}
+################
+CODE @ $80ACB668
+{
+    lis r29, 0x26
+    addi r29, r29, 0x2
+    bne- 0xC
+    lis r29, 0x126
+    addi r29, r29, 0x1
+}
+HOOK @ $80ACB67C
+{
+    %CloneGFX(0x6D, 0x130, 0xF, r29)	#Green Alloy    
+    lwz r3, 8(r30)
+}
+################
+CODE @ $80ACD1D8
+{
+    lis r4, 0x26
+    addi r4, r4, 0x2
+    bne- 0xC
+    lis r4, 0x126
+    addi r4, r4, 0x1
+}
+HOOK @ $80ACD1EC
+{
+    %CloneGFX(0x6D, 0x130, 0xF, r4)	#Green Alloy   
+      lfs f0, 4(r31)
+}
+################
+CODE @ $80ACEE54
+{
+    lis r4, 0x26
+    addi r4, r4, 0x2
+    bne- 0xC
+    lis r4, 0x126
+    addi r4, r4, 0x1
+}
+HOOK @ $80ACEE68
+{
+    %CloneGFX(0x6D, 0x130, 0xF, r4)	#Green Alloy  
+    lfs f0, 4(r31)
+}
+################
+
+#################################################
+Jigglypuff Clone Rollout SFX Fix [codes, DesiacX]
+#################################################
+#Logic changed to suit macro [Desi]
+#Previous, it checked the CloneID. If it wasn't the Clone Id, it'd write Jigglypuffs
+#Now it manualy checks Jigglypuff and any clones.
+.Macro CloneSFX(<CloneID>,<SFXID>,<ComparisonRegister>)
+{
+  cmpwi <ComparisonRegister>, <CloneID>
+  bne+ 0x8
+  li r4, <SFXID>
+}
+################
+HOOK @ $80ACAE38
+{
+  stwu r1, -12(r1)
+  stw r3, 8(r1)
+  lwz r3, 216(r30)
+}
+################
+HOOK @ $80ACAE3C
+{
+    lwz r4, 8(r1)
+    %CloneSFX(0x25, 0x17A1, r4)	#Jigglypuff
+    %CloneSFX(0x6D, 0xC43, r4)	#Green Alloy  
+}
+################
+HOOK @ $80ACAE60
+{
+    lwz r4, 8(r1)
+    lwz r1, 0(r1)
+    %CloneSFX(0x25, 0x9B5, r4)	#Jigglypuff
+    %CloneSFX(0x6D, 0x4BD, r4)	#Green Alloy  
+}
+################
+op NOP @ $80ACF700
+################
+HOOK @ $80ACF704
+{
+    %CloneSFX(0x25, 0x179F, r3)	#Jigglypuff
+    %CloneSFX(0x6D, 0xC41, r3)	#Green Alloy  
+    lwz r3, 216(r31)
+}
+################
+op NOP @ $80ACA098
+################
+HOOK @ $80ACA09C
+{
+    %CloneSFX(0x25, 0x17A0, r3)	#Jigglypuff
+    %CloneSFX(0x6D, 0xC42, r3)	#Green Alloy  
+    lwz r3, 216(r30)
+}
+################
+
+############################
+Dedede Clones Fix [MarioDox]
+############################
+.Macro DededeFix(<CloneID>)
+{
+  cmpwi r3, <CloneID>
+  beq %END%
+}
+
+HOOK @ $80aa1544
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $80aa0af0
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $80aa0d4c
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088f768
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088e758
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088f120
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $8088fa50
+{
+  %DededeFix(0x20) //Dedede
+}
+HOOK @ $80890050
+{
+  %DededeFix(0x20) //Dedede
+}
+
+##################################################
+Bowser Clone Fire Breath Bone Fix [KingJigglypuff]
+##################################################
+.macro BoneIDFix(<FighterID>, <BoneID>)
+{
+    cmpwi r28, <FighterID>
+    bne- 0x0C
+    li r5, <BoneID>
+    b %END%
+}
+HOOK @ $80A391F8        #Use Register 28, followed by Fighter ID and Bone ID
+{
+    %BoneIDFix(0x69, 0x21)        #Bowser Clone Test
+    li r5, 0x33                   #If not defined, use Bowser
+}
+* 06A391FC 0000000C
+* 809B00d8 38610008
+* 38C10020 00000000
+
+.include source/P+Ex/KirbyHatEx.asm
 
 ###############################################################################################
 Classic and All-Star Ending Choice Engine v1.1d [DukeItOut]
@@ -366,9 +807,9 @@ ENDINGTABLE:
 		 1,  2,  3,  4,  5,  6,  7,  8, |	# These are based on the cosmetic ID
 		 9, 10, 11, 12, 13, 42, 42, 16, |	# Zelda and Sheik use 42
 		17, 18, 19, 20, 38, 22, 23, 24, |	#
-		25, 26, 27, 31, 28, 28, 28, 32, |	# Mewtwo is 31 instead of 28 so Pokemon Trainer monsters can access PT's.
+		25, 26, 27, 28, 28, 28, 28, 32, |	# Mewtwo is 31 instead of 28 so Pokemon Trainer monsters can access PT's.
 		33, 34, 35, 37, 40, 41, -1, 44, |	# 40 used by Roy!
-		46, 47, -1, -1, -1, -1, -1, 43, |   # 43 used by Knuckles!
+		46, 47, -1, -1, -1, 31, -1, 43, |   # 31 used by Mewtwo, 43 used by Knuckles!
     	12, -1, 39, 36, -1, 38, -1, -1, |	# 36 used by Waluigi! 39 used by Ridley!
 		-1, -1, -1, -1, -1, -1, -1, -1, |
 		-1, -1, -1, -1, -1, -1, -1, -1, |
@@ -415,7 +856,6 @@ Clone Classic & All-Star Result Data V1.21 [ds22, Dantarion, DukeItOut]
 .alias Wario_Man_Slot = 0x2D
 .alias Ridley_Slot = 0x38
 .alias Waluigi_Slot = 0x39
-.alias Dark_Samus_Slot = 0x40
 .alias Charizard_Slot = 0x1D
 .alias Squirtle_Slot = 0x1F
 .alias Ivysaur_Slot = 0x20
@@ -429,7 +869,6 @@ Clone Classic & All-Star Result Data V1.21 [ds22, Dantarion, DukeItOut]
 .alias Ridley_Trophy = 0x184
 .alias Ridley_Trophy_AllStar = 0x186
 .alias Waluigi_Trophy = 0xFF
-.alias Dark_Samus_Trophy = 0x1E6
 .alias Charizard_Trophy = 0x75
 .alias Squirtle_Trophy = 0x75
 .alias Ivysaur_Trophy = 0x75
@@ -454,7 +893,6 @@ HOOK @ $806E29D0		# Character trophy to load for Classic
   li r29, Wario_Man_Trophy;cmpwi r28, Wario_Man_Slot;beq+ GotTrophy	# if it's Wario-Man's slot 
   li r29, Ridley_Trophy;cmpwi r28, Ridley_Slot;beq+ GotTrophy	# if it's Ridley's P+Ex slot 
   li r29, Waluigi_Trophy;cmpwi r28, Waluigi_Slot;beq+ GotTrophy	# if it's Waluigi's P+Ex slot 
-  li r29, Dark_Samus_Trophy;cmpwi r28, Dark_Samus_Slot;beq+ GotTrophy	# if it's Dark Samus' P+Ex slot 
   li r29, 0x1		# Default to Mario!!!
 GotTrophy:
   rlwinm r3, r29, 0, 16, 31
@@ -472,7 +910,6 @@ HOOK @ $806E47D8	# Character trophy to load for All-Star
   li r26, Wario_Man_Trophy_AllStar;cmpwi r4, Wario_Man_Slot; beq+ GotTrophy	# if it's Wario-Man's slot 
   li r26, Ridley_Trophy_AllStar;cmpwi r4, Ridley_Slot; beq+ GotTrophy	# if it's Ridley's P+Ex slot
   li r26, Waluigi_Trophy;cmpwi r4, Waluigi_Slot; beq+ GotTrophy	# if it's Waluigi's P+Ex slot  
-  li r26, Dark_Samus_Trophy;cmpwi r4, Dark_Samus_Slot; beq+ GotTrophy	# if it's Dark Samus's P+Ex slot  
   li r26, 0x5D		# Default to Mario Finale!!!
   b GotTrophy
 SquirtleTrophy:
