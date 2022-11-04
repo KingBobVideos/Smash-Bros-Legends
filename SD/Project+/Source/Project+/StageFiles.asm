@@ -1346,12 +1346,75 @@ TABLE_3:
 0x57, | # Pyrosphere
 0x58  | # Coliseum
 
-TABLE_4:	# Unused
-TABLE_5:	# Unused
+TABLE_4:
+	byte[30] |
+0x5C, | # Green Hill Zone
+0x2D, | # Mushroom Kingdom U
+0x38, | # Gerudo Valley
+0x15, | # Woolly World
+0x32, | # Magicant
+0x0A, | # Arena Ferox
+0x2E, | # Gateway Galaxy
+0x36, | # Skyloft
+0x07, | # The Great Cave Offensive
+0x41, | # Kalos Pokemon League
+0x34, | # Flat Zone 2
+0x1D, | # Punch Out
+0x4A, | # Gaur Plains
+0x37, | # Duck Hunt
+0x2C, | # Wrecking Crew
+0x30, | # Windy Hill Zone
+0x3A, | # Wily's Castle
+0x4C, | # Suzaku Castle
+0x4D, | # Midgar
+0x4E, | # 3D Land
+0x4F, | # Golden Plains
+0x50, | # Rainbow Road
+0x51, | # Palutena's Temple
+0x52, | # Tortimer Island
+0x53, | # Balloon Fight
+0x54, | # Find Mii
+0x55, | # Pac Maze
+0x56, | # Jungle Hijinx
+0x57, | # Pyrosphere
+0x58  | # Coliseum
+
+TABLE_5:
+	byte[30] |
+0x12, | # Mushroom Kingdom Melee
+0x44, | # Mushroom Kingdom II
+0x42, | # Mute City
+0x26, | # Big Blue
+0x4B, | # Poke Floats
+0x2B, | # Delfino Plaza
+0x13, | # Mushroomy Kingdom
+0x45, | # Mario Circuit
+0x39, | # WarioWare, Inc.
+0x47, | # Bridge of Eldin
+0x35, | # Norfair
+0x0B, | # Frigate Orpheon
+0x0C, | # Yoshi's Island
+0x0D, | # Halberd
+0x0E, | # Lylat Cruise
+0x28, | # Pokemon Stadium 2
+0x11, | # Port Town Aero Dive
+0x46, | # Castle Siege
+0x59, | # Distant Planet
+0x1A, | # Smashville
+0x5A, | # New Pork City
+0x5B, | # Summit
+0x17, | # Sky World
+0x1B, | # Shadow Moses Island 
+0x03, | # Luigi's Mansion
+0x08, | # Pirate Ship
+0x10, | # Spear Pillar
+0x48, | # 75M
+0x04, | # Mario Bros.
+0x2F  | # Hanenbow
 
 TABLE_STAGES:
 # Table of icon<->stage slot associations
-half[92] |	# Stage Count + 2
+half[96] |	# Stage Count + 2
 | # OLD SLOTS
 0x0101, 0x0202, 0x0303, 0x0404, | # Battlefield, Final Destination, Yoshi's Story, Luigi's Mansion
 0x0505, 0x0606, 0x0707, 0x0808, | # Mario Bros, Planet Zebes, Kongo Jungle, Great Cave Offensive
@@ -1377,6 +1440,7 @@ half[92] |	# Stage Count + 2
 0x6452, 0x6553, 0x6654, 0x6755,	| # Rainbow Road, Palutenas Temple, Tortimer Island, Balloon Fight
 0x6856, 0x6957, 0x6A58, 0x6B59,	| # Find Mii, Pac Maze, Jungle Hijinx, Pyrosphere
 0x6C5A, 0x6D5B, 0x6E5C, 0x6F5D,	| # Coliseum, Distant Planet, New Pork City, Summit
+0x705E, 0x715F, 0x7260, 0x7361, |
 
 
 SkipStageTables:
@@ -1385,9 +1449,9 @@ SkipStageTables:
 byte 30 @ $806B929C # Page 1
 byte 30 @ $806B92A4 # Page 2
 byte 30 @ $80496002 # Page 3
-byte 00 @ $80496003 # Page 4 (Unused)
-byte 00 @ $80496004 # Page 5 (Unused)
-byte 90 @ $800AF673 # Stage Count
+byte 30 @ $80496003 # Page 4 (Unused)
+byte 30 @ $80496004 # Page 5 (Unused)
+byte 150 @ $800AF673 # Stage Count
 
 op lis r4, 0x8049 		@ $800AF58C
 op lwz r4, 0x5D00(r4)	@ $800AF594

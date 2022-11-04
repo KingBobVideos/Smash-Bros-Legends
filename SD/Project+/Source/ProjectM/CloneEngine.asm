@@ -687,7 +687,7 @@ HOOK @ $80A391F8        #Use Register 28, followed by Fighter ID and Bone ID
 * 809B00d8 38610008
 * 38C10020 00000000
 
-.include source/P+Ex/KirbyHatEx.asm
+.include source/Extras/KirbyHatEx.asm
 
 ###############################################################################################
 Classic and All-Star Ending Choice Engine v1.1d [DukeItOut]
