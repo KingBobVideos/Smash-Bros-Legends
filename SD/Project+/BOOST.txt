@@ -7,6 +7,7 @@ op blt- 0x34	   @ $8018CFC8
 
 .include source/Legends/MemoryExpansion.asm
 .include source/Legends/MemoryCompression.asm
+.include source/Legends/ItemEx.asm
 .include Source/LegacyTE/Replays.asm
 .include Source/Project+/StageFiles.asm
 .include Source/Project+/CustomRequirements.asm

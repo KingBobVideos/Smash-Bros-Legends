@@ -207,3 +207,36 @@ HOOK @ $807828D4
     lfd f2, 0x150(r31)
     fsubs f1, f1, f2
 }
+
+######################################################
+On hit Action change through Trip Rate [MarioDox, Eon (refactor)]
+######################################################
+//code allowing action changing hitboxes, allowing stuff like Ryu & Ken's crippling Down Bs from Ultimate.
+.macro checkTripRate(<TripRateHalf>, <Action>)
+{
+    lis r6, <TripRateHalf>
+    cmplw r5, r6
+    bne 0xC
+    li r3, <Action>
+    b exit
+}
+HOOK @ $8076BD5C
+{
+    mr r31, r4
+    lwz r5, 0x44(r3)
+    lwz r5, 0x40(r5)
+    lwz r5, 0x6C(r5)    
+    %checkTripRate(0x4040, 0x4B)    //3 = floor cripple
+    %checkTripRate(0x4080, 0xBD)    //4 = death
+    %checkTripRate(0x40a0, 0xFF)    //5 = freeze in place
+    %checkTripRate(0x40c0, 0x46)    //6 = speen knockback
+    %checkTripRate(0x40d0, 0x40)    //7 = grab release (horizontal)
+    %checkTripRate(0x40f0, 0x41)    //8 = grab release (vertical)
+    b %end%
+exit:
+    lis r12, 0x8076
+    ori r12, r12, 0xBDAC
+    mtctr r12 
+    bctr
+}
+
