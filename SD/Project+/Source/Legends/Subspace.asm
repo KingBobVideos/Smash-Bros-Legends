@@ -1,3 +1,42 @@
+############################################################
+BrawlEx Clone Engine v2.0.0.0 Subspace Fix (RSBE.Ver) [JOJI]
+############################################################
+* C2026074 00000003
+* 3CA08000 7C042840
+* 41810008 48000008
+* 80A40008 00000000
+* C2026078 00000006
+* 3C808001 7C042840
+* 41800020 3C808041
+* 60846B70 90840000
+* 38800000 6084F060
+* 3CA08000 48000008
+* 80850004 00000000
+* 20416B70 80416B70
+* 04416B70 00000000
+* 077BA5A0 000000A0
+* 80B84500 817BA5A0
+* 817DA5A0 00020000
+* 004C00CC 00010001
+* 00010F20 00010F20
+* 817BA600 00CCCCCC
+* 00000000 00000000
+* 00000000 00000000
+* CCCCCCCC CCCCCCCC
+* CCCCCCCC CCCCCCCC
+* CCCCCCCC CCCCCCCC
+* CCCCCCCC CCCCCCCC
+* CCCCCCCC CCCCCCCC
+* 817BA5A0 00000000
+* 817BA620 00000000
+* 00000000 CCCCCCCC
+* CCCCCCCC CCCCCCCC
+* 817BA5A0 0000F060
+* 817BA600 00000000
+* 00000000 CCCCCCCC
+* CCCCCCCC CCCCCCCC
+* E0000000 80008000
+
 #############################################################################
 SSEEx Levels [Kapedani]
 #############################################################################
@@ -377,6 +416,17 @@ HOOK @ $806ec4d4
 
 op lbz r6,0x5FA(r4) @ $806ec610   # Use advSaveData->numReserveStocks instead of advSelchrResult->numSelectedFighters 
 
+################################################
+Default Subspace Sound Group is 0x0F2 [Kapedani]
+################################################
+op li r3, 0xF2 @ $8094c1e0
+op li r3, 0xF2 @ $8094c25c
+
+##############################################
+!All Players Can Interact With Warps [Kapedani]
+##############################################
+op b 0x48 @ $8085f47c
+
 ##########################################################################
 !Stamina Behaviour is Defined Individually Per Fighter v1.1 [Kapedani, Eon]
 ##########################################################################
@@ -477,4 +527,3 @@ HOOK @ $81169fa0
     li r12, 0x70            # \ Change filename back to figdisp.pac
     stb r12, -0x4131(r31)   # /
 }
-

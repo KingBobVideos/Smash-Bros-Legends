@@ -15,7 +15,7 @@ op stb r0, -0x1(r5) @ $8003CB1C
 op NOP				@ $8003CB28
 
 ##############################################################################################
-File Patch Code REDUX v0.85 (/Project+) [Sammi Husky]
+File Patch Code REDUX v0.95 (/Project+) [Sammi Husky]
 ##############################################################################################
 .alias _pf               = 0x80507b70
 .alias FPC_PATH          = 0x805a7c00
@@ -65,6 +65,12 @@ File Patch Code REDUX v0.85 (/Project+) [Sammi Husky]
         %lwi    (r4, _pf)                   # \ Append /pf to our mod folder
         %call   (strcat)                    # /
         mr      r4, <filepathRegister>
+        lbz     r0, 0(<filepathRegister>)
+        cmpwi   r0, 0x2f
+        beq     _skip
+        li      r0, 0x2f
+        stb     r0, 0(r5)
+    _skip:
         %call   (strcat)
 }
 
@@ -255,7 +261,7 @@ CODE @ $805A7900
 .alias STREAM_FILES        = 0x805a7450
 .alias SDStreamOpen        = 0x805a7500
 .alias SDStreamRead        = 0x805a7700
-.alias SDStreamClose       = 0x805a7600
+.alias SDStreamClose       = 0x805a7650
 CODE @ $805A7500
 {
 start:
@@ -325,7 +331,7 @@ start:
     lwzx    r31, r3, r4         # | 
     cmpwi   r31, 0              # /
     beq     badend
-    cmpwi   r29, 0
+    cmpwi   r29, 0              # check if need to seek first
     beq     _read
     
 _seek:
@@ -363,7 +369,7 @@ end:
 # @desc:
 #   Closes a specific SD streaming file
 #################################################################
-CODE @ $805A7600
+CODE @ $805A7650
 {
 start:
     stwu    r1, -0x90(r1)
@@ -491,8 +497,23 @@ end:
 #                THPOpen Routine                         
 ################################################################
 op  bl 0x52B9F4 @ $8007be0c    # THPPlayerOpen
-op  bl 0x528AA4 @ $8007ed5c    # mvMoviePlayer::loadLastFrameInfo
-op  bl 0x5289A0 @ $8007ee60    # mvMoviePlayer::loadLastFrame
+
+.macro lastFrameOpenPatch()
+{
+    %lwi    (r5, STREAM_FILES)
+    lwz     r0, 0x0(r5)
+    cmpwi   r0, 0
+    bne     %END%
+    %call   (DVDOpen)
+}
+HOOK @ $8007ed5c        # mvMoviePlayer::loadLastFrameInfo
+{
+    %lastFrameOpenPatch()
+}
+HOOK @ $8007ee60        # mvMoviePlayer::loadLastFrame
+{
+    %lastFrameOpenPatch()
+}
 CODE @ $805A7800
 {
 _sdopen:
@@ -526,9 +547,24 @@ _end:
 op  bl 0x52B964   @ $8007c19c   # THPPlayerClose
 op  bl 0x52BBF4   @ $8007bf0c   # THPPlayerOpenProc
 op  bl 0x52BAAC   @ $8007c054   # THPPlayerOpenProc
-op  bl 0x528CF8   @ $8007ee08   # mvMoviePlayer::closeLastFrameInfo
-op  bl 0x528BD8   @ $8007ef28   # mvMoviePlayer::closeLastFrame
 op  bl 0x528F68   @ $8007eb98   # mvMoviePlayer::__dt
+
+.macro lastFrameClosePatch()
+{
+    %lwi    (r5, STREAM_FILES)
+    lwz     r0, 0x0(r5)
+    cmpwi   r0, 0
+    bne     %END%
+    %call   (DVDClose)
+}
+HOOK @ $8007ee08        # mvMoviePlayer::closeLastFrameInfo
+{
+    %lastFrameClosePatch()
+}
+HOOK @ $8007ef28        # mvMoviePlayer::closeLastFrame
+{
+    %lastFrameClosePatch()
+}
 CODE @ $805A7B00
 {
 _start:
@@ -622,16 +658,6 @@ _end:
 #################################################################
 op  blr  @ $8001eb94
 
-################################################################
-#                   pfmenu2 fixes
-################################################################                                 
-# Description:                                                  
-#     These paths are the only ones in the game that
-#     lack a leading forward slash. 
-#################################################################
-string "/menu2/sc_title.pac"     @ $806FF9A0
-string "/menu2/mu_menumain.pac"  @ $806FB248
-string "/menu2/if_adv_mngr.pac"  @ $80B2C7F8
 .RESET
 
 ##############################################################################################################################
