@@ -481,12 +481,12 @@ float4 custom_main( in CustomShaderData data )
 		float3 result = diffuse_color * data.base_material[0].xyz;
 #else
 		const float rimlight_size = 0.98;
-		const float rimlight_blend = 0.05;
+		const float rimlight_blend = 0.055;
 		float add3  = rimlight_blend + rimlight_size;
 		float basic_fresnel = fresnel(0.1, normal, eye);
 		float rimLightIntensity = smoothstep(rimlight_size, add3, basic_fresnel);
 
-		float3 result = (diffuse_color + data.ambient_lighting[0].xyz) * ao * data.base_material[0].xyz * mix(base_color.xyz, float3(0.0), metallic) + float3(rimLightIntensity * 0.8)  + 0.6 * base_color.xyz + reflected_color;
+		float3 result = (diffuse_color + data.ambient_lighting[0].xyz) * ao * data.base_material[0].xyz * mix(base_color.xyz, float3(0.0), metallic) + float3(rimLightIntensity * 0.8)  + 0.5 * base_color.xyz + reflected_color * 4.0;
 
 #endif
 
