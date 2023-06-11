@@ -486,7 +486,7 @@ float4 custom_main( in CustomShaderData data )
 		float basic_fresnel = fresnel(0.1, normal, eye);
 		float rimLightIntensity = smoothstep(rimlight_size, add3, basic_fresnel);
 
-		float3 result = (diffuse_color + data.ambient_lighting[0].xyz) * ao * data.base_material[0].xyz * mix(base_color.xyz, float3(0.0), metallic) + float3(rimLightIntensity * 0.8)  + 0.5 * base_color.xyz + reflected_color * 4.0;
+		float3 result = (diffuse_color + data.ambient_lighting[0].xyz) * ao * data.base_material[0].xyz * mix(base_color.xyz, float3(0.0), metallic) + float3(rimLightIntensity * 0.8)  + 0.8 * base_color.xyz + reflected_color * 4.0;
 
 #endif
 
