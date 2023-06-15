@@ -1,0 +1,961 @@
+{
+  "meta": {
+    "title": "Legends Shader PBR Character",
+    "author": "Grimdeath"
+  },
+  "features": [
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_9df28980f8e12850_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_9df28980f8e12850_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_9df28980f8e12850_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_9df28980f8e12850_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_9df28980f8e12850_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_b0ba926fdd8ccf80_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_b0ba926fdd8ccf80_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_b0ba926fdd8ccf80_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_b0ba926fdd8ccf80_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_b0ba926fdd8ccf80_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_de3ec548cfe63c33_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_de3ec548cfe63c33_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_de3ec548cfe63c33_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_de3ec548cfe63c33_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_de3ec548cfe63c33_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_55f44668a9859efa_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_55f44668a9859efa_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_55f44668a9859efa_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_55f44668a9859efa_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_55f44668a9859efa_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_4f0405699a06887c_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_4f0405699a06887c_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_4f0405699a06887c_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_4f0405699a06887c_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_4f0405699a06887c_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_19dd86bc4601455b_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_19dd86bc4601455b_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_19dd86bc4601455b_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_19dd86bc4601455b_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_19dd86bc4601455b_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_0d4a20c64b9e0640_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_0d4a20c64b9e0640_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_0d4a20c64b9e0640_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_0d4a20c64b9e0640_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_0d4a20c64b9e0640_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_3cf328d288b7b911_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_3cf328d288b7b911_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_3cf328d288b7b911_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_3cf328d288b7b911_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_3cf328d288b7b911_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_aeefd303b14ded14_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_aeefd303b14ded14_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_aeefd303b14ded14_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_aeefd303b14ded14_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_aeefd303b14ded14_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_87f14a2adf9f9c37_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_87f14a2adf9f9c37_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_87f14a2adf9f9c37_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_87f14a2adf9f9c37_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_87f14a2adf9f9c37_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_7972e1e259d058bd_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_7972e1e259d058bd_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_7972e1e259d058bd_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_7972e1e259d058bd_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_7972e1e259d058bd_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_7e99dce8104c63e4_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_7e99dce8104c63e4_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_7e99dce8104c63e4_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_7e99dce8104c63e4_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_7e99dce8104c63e4_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_9338c22cd1f61929_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_9338c22cd1f61929_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_9338c22cd1f61929_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_9338c22cd1f61929_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_9338c22cd1f61929_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_298919812a08e16f_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_298919812a08e16f_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_298919812a08e16f_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_298919812a08e16f_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_298919812a08e16f_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_e95d41a8b2b5ae8c_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_e95d41a8b2b5ae8c_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_e95d41a8b2b5ae8c_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_e95d41a8b2b5ae8c_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_e95d41a8b2b5ae8c_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_fef86fd9a41db3ac_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_fef86fd9a41db3ac_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_fef86fd9a41db3ac_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_fef86fd9a41db3ac_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_fef86fd9a41db3ac_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_762eac468d00a23b_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_762eac468d00a23b_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_762eac468d00a23b_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_762eac468d00a23b_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_762eac468d00a23b_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_40e2733cbdb5ef5c_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_40e2733cbdb5ef5c_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_40e2733cbdb5ef5c_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_40e2733cbdb5ef5c_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_40e2733cbdb5ef5c_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_3b72a155d514f249_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_3b72a155d514f249_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_3b72a155d514f249_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_3b72a155d514f249_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_3b72a155d514f249_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_1bacbccda417488b_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_1bacbccda417488b_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_1bacbccda417488b_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_1bacbccda417488b_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_1bacbccda417488b_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_584dae4aededfba0_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_584dae4aededfba0_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_584dae4aededfba0_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_584dae4aededfba0_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_584dae4aededfba0_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_c6309b47573f5aca_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_c6309b47573f5aca_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_c6309b47573f5aca_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_c6309b47573f5aca_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_c6309b47573f5aca_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_fd3a1f2934cbcf8b_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_fd3a1f2934cbcf8b_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_fd3a1f2934cbcf8b_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_fd3a1f2934cbcf8b_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_fd3a1f2934cbcf8b_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x32_e94ff92ba369b400_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x32_e94ff92ba369b400_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x32_e94ff92ba369b400_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x32_e94ff92ba369b400_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x32_e94ff92ba369b400_6"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_32x16_9d06ae22f20fe8e2_6_normal.png"
+          },
+          {
+            "code_name": "METALLIC_TEX",
+            "texture_path": "tex1_32x16_9d06ae22f20fe8e2_6_metallic.png"
+          },
+          {
+            "code_name": "ROUGHNESS_TEX",
+            "texture_path": "tex1_32x16_9d06ae22f20fe8e2_6_smoothness.png"
+          },
+          {
+            "code_name": "AMBIENT_OCCLUSION_TEX",
+            "texture_path": "tex1_32x16_9d06ae22f20fe8e2_6_occlusion.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_32x16_9d06ae22f20fe8e2_6"
+    }
+  ],
+  "groups": [
+    {
+      "name": "NormalShaderTarget_tex1_32x32_9df28980f8e12850_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_9df28980f8e12850_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_9df28980f8e12850_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_b0ba926fdd8ccf80_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_b0ba926fdd8ccf80_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_b0ba926fdd8ccf80_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_de3ec548cfe63c33_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_de3ec548cfe63c33_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_de3ec548cfe63c33_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_55f44668a9859efa_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_55f44668a9859efa_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_55f44668a9859efa_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_4f0405699a06887c_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_4f0405699a06887c_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_4f0405699a06887c_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_19dd86bc4601455b_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_19dd86bc4601455b_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_19dd86bc4601455b_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_0d4a20c64b9e0640_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_0d4a20c64b9e0640_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_0d4a20c64b9e0640_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_3cf328d288b7b911_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_3cf328d288b7b911_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_3cf328d288b7b911_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_aeefd303b14ded14_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_aeefd303b14ded14_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_aeefd303b14ded14_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_87f14a2adf9f9c37_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_87f14a2adf9f9c37_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_87f14a2adf9f9c37_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_7972e1e259d058bd_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_7972e1e259d058bd_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_7972e1e259d058bd_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_7e99dce8104c63e4_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_7e99dce8104c63e4_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_7e99dce8104c63e4_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_9338c22cd1f61929_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_9338c22cd1f61929_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_9338c22cd1f61929_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_298919812a08e16f_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_298919812a08e16f_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_298919812a08e16f_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_e95d41a8b2b5ae8c_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_e95d41a8b2b5ae8c_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_e95d41a8b2b5ae8c_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_fef86fd9a41db3ac_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_fef86fd9a41db3ac_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_fef86fd9a41db3ac_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_762eac468d00a23b_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_762eac468d00a23b_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_762eac468d00a23b_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_40e2733cbdb5ef5c_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_40e2733cbdb5ef5c_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_40e2733cbdb5ef5c_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_3b72a155d514f249_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_3b72a155d514f249_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_3b72a155d514f249_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_1bacbccda417488b_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_1bacbccda417488b_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_1bacbccda417488b_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_584dae4aededfba0_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_584dae4aededfba0_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_584dae4aededfba0_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_c6309b47573f5aca_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_c6309b47573f5aca_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_c6309b47573f5aca_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_fd3a1f2934cbcf8b_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_fd3a1f2934cbcf8b_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_fd3a1f2934cbcf8b_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x32_e94ff92ba369b400_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x32_e94ff92ba369b400_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x32_e94ff92ba369b400_6",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_32x16_9d06ae22f20fe8e2_6",
+      "targets": [
+        {
+          "texture_filename": "tex1_32x16_9d06ae22f20fe8e2_6",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_32x16_9d06ae22f20fe8e2_6",
+          "type": "load_texture"
+        }
+      ]
+    }
+  ]
+}
+
