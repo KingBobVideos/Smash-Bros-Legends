@@ -1,7 +1,7 @@
 {
   "mods": [
     {
-      "enabled": true,
+      "enabled": false,
       "features": [
         {}
       ],
@@ -65,6 +65,284 @@
       "groups": [],
       "path": "All Games Native Resolution DOF\/metadata.json",
       "source": "system",
+      "weight": 0
+    },
+    {
+      "enabled": true,
+      "features": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "groups": [
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        }
+      ],
+      "path": "Legends Shader PBR Characters\/metadata.json",
+      "source": "user",
+      "weight": 0
+    },
+    {
+      "enabled": true,
+      "features": [
+        {},
+        {},
+        {}
+      ],
+      "groups": [
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        },
+        {
+          "targets": [
+            {},
+            {}
+          ]
+        }
+      ],
+      "path": "Legends Shader PBR Stages\/metadata.json",
+      "source": "user",
       "weight": 0
     }
   ]

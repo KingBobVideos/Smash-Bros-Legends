@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Legends Shader PBR Stages",
+    "author": "Legends Team, iwubcode"
+  },
+  "features": [
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_512x512_a7f6bb8411dd244b_14_normal.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_512x512_a7f6bb8411dd244b_14"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_512x256_36c5fa9fcc58f147_14_normal.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_512x256_36c5fa9fcc58f147_14"
+    },
+    {
+      "action": "custom_pixel",
+      "action_data": {
+        "color_shader_path": "color.glsl",
+        "inputs": [
+          {
+            "code_name": "NORMAL_TEX",
+            "texture_path": "tex1_512x512_bef7773c123539b1_14_normal.png"
+          }
+        ]
+      },
+      "group": "NormalShaderTarget_tex1_512x512_bef7773c123539b1_14"
+    }
+  ],
+  "groups": [
+    {
+      "name": "NormalShaderTarget_tex1_512x512_a7f6bb8411dd244b_14",
+      "targets": [
+        {
+          "texture_filename": "tex1_512x512_a7f6bb8411dd244b_14",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_512x512_a7f6bb8411dd244b_14",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_512x256_36c5fa9fcc58f147_14",
+      "targets": [
+        {
+          "texture_filename": "tex1_512x256_36c5fa9fcc58f147_14",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_512x256_36c5fa9fcc58f147_14",
+          "type": "load_texture"
+        }
+      ]
+    },
+    {
+      "name": "NormalShaderTarget_tex1_512x512_bef7773c123539b1_14",
+      "targets": [
+        {
+          "texture_filename": "tex1_512x512_bef7773c123539b1_14",
+          "type": "draw_started"
+        },
+        {
+          "texture_filename": "tex1_512x512_bef7773c123539b1_14",
+          "type": "load_texture"
+        }
+      ]
+    }
+  ]
+}
+
