@@ -35,3 +35,8 @@ Dolphin/User/Config/Dolphin.ini
 *.ini
 Dolphin/User/Config/GFX.ini
 *.usage
+*.s01
+*.ini
+Dolphin/User/Config/Dolphin.ini
+Dolphin/User/Config/GFX.ini
+*.ini
