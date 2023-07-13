@@ -1275,10 +1275,10 @@ TABLE_1:
 0x17, | # Green Greens
 0x18, | # Corneria
 0x19, | # Venom
-0x2A, | # Pokemon Stadium
-0x2B, | # Onett
-0x2C, | # Fourside
-0x2D  | # Brinstar Depths
+0x1A, | # Pokemon Stadium
+0x1B, | # Onett
+0x1C, | # Fourside
+0x1D  | # Brinstar Depths
 
 
 TABLE_STAGES:
@@ -1292,7 +1292,7 @@ half[32] |	# Stage Count + 2
 0x1111, 0x1212, 0x1313, 0x1414, | # Spear Pillar, Port Town Aero Dive, Mushroom Kingdom Melee, Mushroomy Kingdom
 0x1515, 0x1616, 0x1717, 0x1818, | # Peach's Castle, Yoshis Woolly World, Fountain of Dreams, Skyworld
 0x1919, 0x1A1A, 0x1B1B, 0x1C1C, | # Kongo Falls, Fourside, Smashville, Shadow Moses Island
-0x1D1D, 0x1E1E, 0xFF64, 0xFF64, | NOTHING, NOTHING
+0x1D1D, 0x1E1E, 0xFF64, 0xFF64, | # NOTHING, NOTHING
 
 
 
