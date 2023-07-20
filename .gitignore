@@ -43,3 +43,5 @@ Dolphin/User/Config/GFX.ini
 Dolphin/User/StateSaves/lastState.sav
 Dolphin/User/Config/Dolphin.ini
 Dolphin/User/Config/GFX.ini
+*.ini
+Dolphin/User/Config/Dolphin.ini
