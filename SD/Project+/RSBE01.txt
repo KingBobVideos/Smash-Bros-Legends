@@ -3259,6 +3259,13 @@ Alloys Can Shield, Dodge & Grab Ledges [ds22]
 * 048A083C 48000078
 * 048A087C 48000038
 
+###############################################
+Sound as default cursor of options menu [𝔊𝔩𝔦𝔱𝔠𝔥]
+###############################################
+* c3177fd8 00000002
+* 38000004 b01f0042
+* 60000000 00000000
+
 .include Source/Project+/PokeTrainer.asm
 
 
