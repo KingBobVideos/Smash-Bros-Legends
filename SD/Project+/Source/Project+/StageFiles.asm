@@ -1251,15 +1251,15 @@ TABLE_1:
 	byte[30] |
 0x00, | # Battlefield
 0x01, | # Final Destination
-0x02, | # Peach's Castle 64
-0x03, | # Kongo Jungle
-0x04, | # Hyrule Castle
-0x05, | # Super Happy Tree
-0x06, | # Planet Zebes
-0x07, | # Dream Land
-0x08, | # Sector Z
-0x09, | # Saffron City
-0x0A, | # Mushroom Kingdom 64
+0x24, | # Peach's Castle 64
+0x06, | # Kongo Jungle
+0x09, | # Hyrule Castle
+0x20, | # Super Happy Tree
+0x05, | # Planet Zebes
+0x23, | # Dream Land
+0x25, | # Sector Z
+0x0F, | # Saffron City
+0x3F, | # Mushroom Kingdom 64
 0x0B, | # The Beginning
 0x0C, | # Metal Cavern
 0x0D, | # Peach's Castle
@@ -1283,16 +1283,33 @@ TABLE_1:
 
 TABLE_STAGES:
 # Table of icon<->stage slot associations
-half[32] |	# Stage Count + 2
+half[96] |	# Stage Count + 2
 | # OLD SLOTS
 0x0101, 0x0202, 0x0303, 0x0404, | # Battlefield, Final Destination, Yoshi's Story, Luigi's Mansion
 0x0505, 0x0606, 0x0707, 0x0808, | # Mario Bros, Planet Zebes, Kongo Jungle, Great Cave Offensive
-0x0909, 0x0A0A, 0x0B0B, 0x0C0C, | # Pirate Ship, Hyrule Castle, Arena Ferox, Frigate Orpheon
-0x0D0D, 0x0E0E, 0x0F0F, 0x1010, | # Yoshi's Island, Halberd, Lylat Cruise, Saffron City
-0x1111, 0x1212, 0x1313, 0x1414, | # Spear Pillar, Port Town Aero Dive, Mushroom Kingdom Melee, Mushroomy Kingdom
-0x1515, 0x1616, 0x1717, 0x1818, | # Peach's Castle, Yoshis Woolly World, Fountain of Dreams, Skyworld
-0x1919, 0x1A1A, 0x1B1B, 0x1C1C, | # Kongo Falls, Fourside, Smashville, Shadow Moses Island
-0x1D1D, 0x1E1E, 0xFF64, 0xFF64, | # NOTHING, NOTHING
+0x0909, 0x330A, 0x492C, 0x0C0C, | # Pirate Ship, Hyrule Castle, Arena Ferox, Frigate Orpheon
+0x0D0D, 0x0E0E, 0x130F, 0x1410, | # Yoshi's Island, Halberd, Lylat Cruise, Saffron City
+0x1511, 0x1612, 0x1713, 0x1814, | # Spear Pillar, Port Town Aero Dive, Mushroom Kingdom Melee, Mushroomy Kingdom
+0x5A48, 0x1C16, 0x1D17, 0x1E18, | # Peach's Castle, Yoshis Woolly World, Fountain of Dreams, Skyworld
+0x1F19, 0x201A, 0x211B, 0x221C, | # Kongo Falls, Fourside, Smashville, Shadow Moses Island
+0x231D, 0x482B, 0x4326, 0x2932, | # Green Hill Zone, Punch Out, Great Bay, Hyrule Temple
+0x2A33, 0x472A, 0x2C35, 0x2D36, | # Super Happy Tree, The Beginning, Onett, Dream Land 64
+0x2F37, 0x3038, 0x3139, 0x323A, | # Peach's Castle 64, Sector Z, Big Blue, Brinstar
+0x2E3B, 0xFF64, 0xFF64, 0x373C, | # Pokemon Stadium 2, NOTHING, NOTHING, Delfino Plaza
+| # NEW SLOTS
+0x4023, 0x5947, 0x4225, 0x251F, | # Wrecking Crew, Mushroom Kingdom U, Gateway Galaxy, Hanenbow
+0x4427, 0x4528, 0x4629, 0x2B34, | # Windy Hill Zone, Dinosaur Land, Magicant, Jungle Japes
+0x241E, 0x0B0B, 0x4A2D, 0x4B2E, | # Flat Zone 2, Norfair, Skyloft, Duck Hunt
+0x4C2F, 0x4D30, 0x4E31, 0x4F3D, | # Gerudo Valley, Wario Ware, Wilys Castle, Rainbow Cruise
+0x503E, 0x513F,	0x5240, 0x5341,	| # Green Greens, Corneria, Venom, Mushroom Kingdom 64
+0x5442, 0x5543, 0x5644, 0x5745,	| # Pokemon Stadium, TEMP, Mute City, Brinstar Depths
+0x5846, 0x4124, 0x1915, 0x5B49,	| # Mushroom Kingdom 2, Mario Circuit, Castle Siege, Bridge of Eldin
+0x5C4A, 0x5D4B, 0x5E4C, 0x5F4D,	| # 75M, Metal Cavern, Gaur Plains, Poke Floats
+0x604E, 0x614F, 0x6250, 0x6351,	| # Suzaku Castle, Midgar, 3D Land, Golden Plains
+0x6452, 0x6553, 0x6654, 0x6755,	| # Rainbow Road, Palutenas Temple, Tortimer Island, Balloon Fight
+0x6856, 0x6957, 0x6A58, 0x6B59,	| # Find Mii, Pac Maze, Jungle Hijinx, Pyrosphere
+0x6C5A, 0x6D5B, 0x6E5C, 0x6F5D,	| # Coliseum, Distant Planet, New Pork City, Summit
+0x705E, 0x715F, 0x7260, 0x7361, |
 
 
 
