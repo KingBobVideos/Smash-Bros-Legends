@@ -1,0 +1,171 @@
+EX Character Cosmetic IDs
+
+NOTE: ! Denotes fighters who load their cosmetics outside of sc_selcharacter.pac, on account of having 15 costumes.
+
+!Mewtwo-27
+
+!Roy-39
+
+Mega Man X-41
+
+!Knuckles-42
+
+!Giga Bowser-44
+
+Dr. Mario-64
+
+Pichu-65
+
+!Wario-Man-66
+
+Waluigi-68
+
+Phantom Ganon-70
+
+Fierce Deity Link-71
+
+Geno-72
+
+Metal Sonic-74
+
+!Lucina-75
+
+!Sword Ganondorf-77
+
+!VectorMan-78
+
+!Metal Mario-80
+
+!Toad-81
+
+Deathborn-82
+
+Black Shadow-83
+
+Blood Falcon-84
+
+Sephiroth-85
+
+Persona 4 Protagonist-86
+
+Alph-87
+
+!Wii Fit Trainer-88
+
+Squall-89
+
+Louie-90
+
+Ninten-91
+
+!Dr. Luigi-93
+
+Tails-94
+
+Dry Bowser-95
+
+Corrin-96
+
+Sub Zero-97
+
+Toon Zelda-98
+
+!Nu-99
+
+!Chrom-100
+
+Knuckle Joe-101
+
+Metal Face-102
+
+!Daisy-103
+
+Shulk-104
+
+Robin-105
+
+Ken-106
+
+Dark Samus-107
+
+Master Hand (Boss)-108
+
+Crazy Hand (Boss)-109
+
+Masked Man-110
+
+Lyn-111
+
+Isaac-112
+
+Little Mac-113
+
+Elizabeth-114
+
+Terry-115
+
+Bomberman-116
+
+Navarre-117
+
+Blaziken-118
+
+Bandana Dee-119
+
+!Zack-120
+
+Cloud-121
+
+!Ridley-122
+
+!Young Link-123
+
+!Zeraora-125
+
+!Mega Mewtwo Y-127
+
+Dark Pit-128
+
+Ryu-133
+
+Black Knight-135
+
+Zero-136
+
+Simon-138
+
+Richter-139
+
+Fighting Alloy Team-140
+
+!Shadow-146
+
+Bayonetta-147
+
+!Palutena-148
+
+!Suitless Samus-149
+
+!Mega Charizard X-150
+
+Joker-151
+
+sans-153
+
+PAC-MAN-154
+
+Sandbag-155
+
+!Naked Snake-156
+
+!Mythra-157
+
+!Pyra-158
+
+!Sora-160
+
+!Super Sonic-244
+
+!Mega Lucario-246
+
+!Brawl Meta Knight-248

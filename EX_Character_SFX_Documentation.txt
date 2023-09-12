@@ -1,0 +1,171 @@
+EX Character Soundbanks
+
+All L-Loads share their soundbanks with their character bases unless otherwise noted
+
+Since Remix uses Project+'s Replacement Soundbank Engine, all Sawnd files are named for their soundbank.
+
+Simon-0x000001C8
+
+Richter-0x000001C7
+
+Naked Snake-0x00000219
+
+Black Knight-0x000001AE
+
+Black Shadow-0x0000019D
+
+Blood Falcon-0x0000000D (shared with Captain Falcon)
+
+Chrom-0x000001A3
+
+Cloud-0x00000153
+
+Daisy-0x000001ED
+
+Dark Pit-0x000001B3
+
+Dark Samus-0x0000023E
+
+Deathborn-0x00000233
+
+Dr. Luigi-0x0000000C (shared with Luigi)
+
+Dr. Mario-0x00000001 (shared with Mario)
+
+Geno-0x0000018C
+
+Dry Giga Bowser-0xFFFFFFFF (loads SFX from Bowser/Dry Bowser's soundbank)
+
+Isaac-0x00000148
+
+Joker-0x0000019E
+
+Corrin (F)-0x000001B5
+
+Corrin (M)-0x000001B4
+
+Knuckle Joe-0x0000007A (Assist Trophy Knuckle Joe)
+
+Knuckles-0x00000176
+
+Dry Bowser-0x0000000F (Shared with Bowser)
+
+Little Mac-0x000001F0
+
+Lucina-0x0000018F
+
+Lyn-0x00000146
+
+Masked Man-0x00000019 (shared with Lucas)
+
+Metal Face-0x0000023B
+
+Metal Sonic-0x0000018E
+
+Mewtwo-0x000000144
+
+Mythra-0x00000017D
+
+Ninten-0x0000018B
+
+Fierce Deity Link-0x00000224
+
+PAC-MAN-0x0000023A
+
+Palutena-0x000001CB
+
+Phantom Ganon-0x0000018A
+
+Pichu-0x0000019F
+
+Louie-0x00000018 (shared with Olimar)
+
+Alph-0x00000018 (shared with Olimar)
+
+Robin (M)-0x000001AF
+
+Robin (F)-0x000001B0
+
+Ridley-0x00000157
+
+Roy-0x00000145
+
+Ryu-0x00000158
+
+Sandbag-0x0000000B (shared with Pikachu)
+
+sans-0x000001F2
+
+Sephiroth-0x00000161
+
+Shadow-0x000001BB
+
+Shulk-0x000001A2
+
+Squall-0x00000198
+
+Sub Zero-0x00000183
+
+Tails-0x00000238
+
+Toad-0x00000177
+
+Toon Zelda-0x00000230
+
+Waluigi-0x0000016E
+
+Young Link-0x000001A0
+
+Persona 4 Protagonist-0x000001A8
+
+Blue Alloy (fighter)-0x00000011 (shared with Zelda/Sheik)
+
+Green Alloy (fighter)-0x00000009 (shared with Kirby)
+
+Red Alloy (fighter)-0x0000000D (shared with Captain Falcon)
+
+Yellow Alloy (fighter)-0x00000001 (shared with Mario)
+
+Zero-0x00000189
+
+Ken-0x0000015F
+
+Navarre-0x0000022B
+
+Blaziken-0x0000022E
+
+Elizabeth-0x000001C1
+
+Terry-0x00000184
+
+Bomberman-0x00000154
+
+Bandana Dee-0x00000178
+
+Nu-0x0000014C
+
+VectorMan-0x000001E8
+
+Wii Fit Trainer-0x000001E3
+
+Bayonetta-0x00000243
+
+Mega Man X-0x00000201
+
+Pyra-0x00000208
+
+Hero-0x000001C9
+
+SSB4 Lucina-0x000001AC
+
+Banjo-0x00000164
+
+Isabelle-0x00000232
+
+Zack-0x000001C6
+
+Silver-0x000001B7
+
+Zeraora-0x00000165
+
+Sora-0x000001D1

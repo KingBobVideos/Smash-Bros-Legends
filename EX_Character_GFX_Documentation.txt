@@ -1,0 +1,208 @@
+EX Character GFX Banks
+
+
+Naked Snake-ef_snake
+
+Solid Snake-ef_custom2E
+
+Bandana Dee-ef_custom72
+
+Black Knight-ef_customFE
+
+Black Shadow-ef_custom79
+
+Blood Falcon-ef_custom09
+
+Bomberman-ef_custom85
+
+Bowser-ef_custom98 (for custom trails)
+
+Blaziken-ef_custom84
+
+Chrom-ef_custom37
+
+Cloud-ef_custom77
+
+Daisy-ef_customF4
+
+Dark Pit-ef_custom44
+
+Dark Samus-ef_custom86
+
+Deathborn-ef_waddledoo
+
+Dr. Luigi-ef_custom89
+
+Dr. Mario-ef_dr_mario
+
+Sword Ganondorf-ef_custom14
+
+Geno-ef_custom48
+
+Giant Donkey Kong-ef_customDF
+
+Dry Giga Bowser-ef_gkoopa
+
+Isaac-ef_custom4C
+
+Joker-ef_custom7D
+
+Corrin (Female)-ef_custom5B
+
+Corrin (Male)-ef_custom74
+
+Ken-ef_customA6
+
+Knuckle Joe-ef_custom5F, ef_joe (uses both)
+
+Knuckles-ef_custom42
+
+Dry Bowser-ef_karon, ef_custom75 (for custom trails)
+
+Elizabeth-ef_custom13
+
+Link-ef_custom99 (for Dark Link GFX)
+
+Little Mac-ef_custom63
+
+Lucario-ef_custom97 (for custom trails)
+
+Lucina-ef_custom4B
+
+Lyn-ef_custom24
+
+Masked Man-ef_custom93
+
+Mega Charizard X-ef_customFD
+
+Mega Lucario-ef_customA3
+
+Mega Man X-ef_custom59
+
+Mega Mewtwo Y-ef_custom9F
+
+Brawl Meta Knight-ef_custom16
+
+Metal Face-ef_customFF
+
+Metal Mario-ef_met
+
+Metal Sonic-ef_custom4A
+
+Mewtwo-ef_mewtwo, ef_custom96 (for custom trails)
+
+Navarre-ef_custom27
+
+Ninten-ef_custom11
+
+Nu-ef_custom69
+
+Fierce Deity Link-ef_custom02
+
+PAC-MAN-ef_custom64
+
+Palutena-ef_custom73
+
+Phantom Ganon-ef_custom46
+
+Pichu-ef_custom41
+
+Pikachu-ef_custom51 (for custom trails)
+
+Louie-ef_pikmin
+
+Alph-ef_custom18
+
+Pit-ef_custom17 (for custom trails)
+
+Big Jigglypuff-ef_custom25
+
+Robin (M)-ef_custom6E
+
+Robin (F)-ef_custom70
+
+Richter-ef_custom78
+
+Ridley-ef_custom43
+
+Roy-ef_roy
+
+Ryu-ef_custom52
+
+Samus-ef_customA7 (for custom trails)
+
+Sandbag-ef_custom2B
+
+sans-ef_custom4F
+
+Sephiroth-ef_custom62
+
+Shadow-ef_custom49
+
+Shulk-ef_custom5A
+
+Simon-ef_custom6F
+
+Squall-ef_custom5C
+
+Sub Zero-ef_custom4E
+
+Suitless Samus-ef_ploum
+
+Super Sonic-ef_bonkers, ef_blowm (Final Smash)
+
+Tails-ef_custom01, ef_FinRobot (entry)
+
+Terry-ef_custom95
+
+Toad-ef_custom55
+
+Toon Zelda-ef_toon_zelda
+
+VectorMan-ef_custom20
+
+Waluigi-ef_custom2A
+
+Wii Fit Trainer-ef_wiiems, ef_bladeknight (results)
+
+Yoshi-ef_custom9B (for custom trails)
+
+Young Link-ef_custom3F
+
+Persona 4 Protagonist-ef_custom50
+
+Blue Alloy (fighter)-ef_zakogirl
+
+Green Alloy (fighter)-ef_zakoball
+
+Red Alloy (fighter)-ef_zakoboy
+
+Yellow Alloy (fighter)-ef_zakochild
+
+Zeraora-ef_custom21
+
+Zero-ef_custom56
+
+Hero-ef_custom71
+
+Mighty-ef_custom83
+
+SSB4 Lucina-ef_custom54
+
+Pyra-ef_customAA
+
+Mythra-ef_customA9
+
+Banjo-ef_custom61
+
+Isabelle-ef_customA1
+
+Ultimate Wolf-ef_spar
+
+Sukapon-ef_custom00
+
+Zack-ef_custom76
+
+Silver-ef_custom5D
+
+Sora-ef_custom7C

@@ -1,0 +1,162 @@
+Flag   |SlotID |FighterID  |CSSSlotID  |CosmeticID |Internal Name   |Fighter Name
+-------+-------+-----------+-----------+-----------+----------------+------------------------------------------
+       |0x00   |0x00       |0x00       |0x00       |mario           |Mario
+       |0x01   |0x01       |0x01       |0x01       |donkey          |Donkey Kong
+       |0x02   |0x02       |0x02       |0x02       |link            |Link
++s     |0x49   |           |           |           |samus/szerosuit |Samus/Zero Suit Samus // Single player only
+       |0x03   |0x03       |0x03       |0x03       |samus           |Samus
+       |0x04   |0x18       |0x04       |0x17       |szerosuit       |Zero Suit Samus
+       |0x05   |0x04       |0x05       |0x04       |yoshi           |Yoshi
+       |0x06   |0x05       |0x06       |0x05       |kirby           |Kirby
+       |0x07   |0x06       |0x07       |0x06       |fox             |Fox
+       |0x08   |0x07       |0x08       |0x07       |pikachu         |Pikachu
+       |0x09   |0x08       |0x09       |0x08       |luigi           |Luigi
+       |0x0A   |0x09       |0x0A       |0x09       |captain         |Captain Falcon
+       |0x0B   |0x0A       |0x0B       |0x0A       |ness            |Ness
+       |0x0C   |0x0B       |0x0C       |0x0B       |bowser          |Bowser
+       |0x0D   |0x0C       |0x0D       |0x0C       |peach           |Peach
+       |       |           |           |0x26       |zelda/sheik     |Zelda/Sheik
++s     |0x4A   |           |           |           |zelda/sheik     |Zelda/Sheik // Single player only
+       |0x0E   |0x0D       |0x0E       |0x0D       |zelda           |Zelda
+       |0x0F   |0x0E       |0x0F       |0x0E       |sheik           |Sheik
+       |0x10   |           |0x10       |0x0F       |iceclimber      |Ice Climbers
+       |0x11   |0x0F       |           |           |popo            |Popo
+       |0x12   |0x10       |           |           |nana            |Nana
+       |0x13   |0x11       |0x11       |0x10       |marth           |Marth
+       |0x14   |0x12       |0x12       |0x11       |gamewatch       |Mr. Game & Watch
+       |0x15   |0x13       |0x13       |0x12       |falco           |Falco
+       |0x16   |0x14       |0x14       |0x13       |ganon           |Ganondorf
+       |0x17   |0x15       |0x15       |0x14       |wario           |Wario
+       |0x18   |0x16       |0x16       |0x15       |metaknight      |Meta Knight
+       |0x19   |0x17       |0x17       |0x16       |pit             |Pit
+       |0x1A   |0x19       |0x18       |0x18       |pikmin          |Olimar & Pikmin
+       |0x1B   |0x1A       |0x19       |0x19       |lucas           |Lucas
+       |0x1C   |0x1B       |0x1A       |0x1A       |diddy           |Diddy Kong
+X      |       |0x1C       |0x1B       |0x1B       |poketrainer     |Pokémon Trainer
++s     |0x48   |           |           |           |poketrainer     |Pokémon Trainer // Single player only
+       |0x1D   |0x1D       |0x1C       |0x1C       |pokelizardon    |Charizard // Pokémon Trainer
+       |0x1E   |           |           |           |lizardon        |Charizard (Independent)
+       |0x1F   |0x1E       |0x1D       |0x1D       |pokezenigame    |Squirtle // Pokémon Trainer
+       |0x20   |           |           |           |zenigame        |Squirtle (Independent)
+       |0x21   |0x1F       |0x1E       |0x1E       |pokefushigisou  |Ivysaur // Pokémon Trainer
+       |0x22   |           |           |           |fushigisou      |Ivysaur (Independent)
+       |0x23   |0x20       |0x1F       |0x1F       |dedede          |King Dedede
+       |0x24   |0x21       |0x20       |0x20       |lucario         |Lucario
+       |0x25   |0x22       |0x21       |0x21       |ike             |Ike
+       |0x26   |0x23       |0x22       |0x22       |robot           |R.O.B.
+       |0x27   |0x25       |0x23       |0x23       |purin           |Jigglypuff
+       |0x28   |0x29       |0x24       |0x25       |toonlink        |Toon Link
+       |0x29   |0x2C       |0x25       |0x27       |wolf            |Wolf
+       |0x2A   |0x2E       |0x26       |0x28       |snake           |Snake
+       |0x2B   |0x2F       |0x27       |0x29       |sonic           |Sonic
+X      |0x2C   |0x30       |           |           |gkoopa          |Giga Bowser
+X      |0x2D   |0x31       |           |           |warioman        |Wario-Man
+       |0x2E   |0x32       |0x38       |0x38       |zakoboy         |Red Alloy (Don't use in event matches)
+       |0x2F   |0x33       |0x39       |0x39       |zakogirl        |Blue Alloy (Don't use in event matches)
+       |0x30   |0x34       |0x3A       |0x3A       |zakochild       |Yellow Alloy (Don't use in event matches)
+       |0x31   |0x35       |0x3B       |0x3B       |zakoball        |Green Alloy (Don't use in event matches)
+       |0x11   |0x0F       |0x37       |0x0F       |popo            |Sopo (PMEX)
+       |0x2C   |0x30       |0x30       |0x30       |gkoopa          |Giga Bowser (PMEX)
+       |0x2D   |0x31       |0x35       |0x35       |warioman        |Wario-Man (PMEX)
+       |0x32   |0x27       |0x2D       |0x24       |roy             |Roy (Project M Only)
+       |0x33   |0x26       |0x2E       |0x1B       |mewtwo          |Mewtwo (Project M Only)
+       |0x34   |0x24       |0x2A       |0x2E       |lyn             |Lyn (Remix)
+       |0x35   |0x2D       |0x2F       |0x2F       |knuckles        |Knuckles (Project + Only)
+       |0x36   |0x38       |0x3E       |0x3E       |drmario         |Dr. Mario (Remix)
+       |0x37   |0x37       |0x31       |0x31       |rockmanx        |Mega Man X (Remix)
+       |0x38   |0x2A       |0x32       |0x32       |ridley          |Ridley (Remix)
+       |0x39   |0x28       |0x33       |0x33       |waluigi         |Waluigi (Remix)
+       |0x3A   |0x2B       |0x34       |0x34       |robin           |Isaac (Remix)
+       |0x3F   |0x3F       |0x3F       |0x3F       |younglink       |Young Link
+       |0x40   |0x40       |0x40       |0x40       |darksamus       |Dark Samus
+       |0x41   |0x41       |0x41       |0x41       |pichu           |Pichu
+       |0x42   |0x42       |0x42       |0x42       |metalsonic      |Metal Sonic
+       |0x43   |0x43       |0x43       |0x43       |bomberman       |Bomberman
+       |0x44   |0x44       |0x44       |0x44       |bigboss         |Big Boss
+       |0x45   |0x45       |0x45       |0x45       |ken             |Ken
+       |0x46   |0x46       |0x46       |0x46       |phantomg        |Phantom Ganon
+       |0x47   |0x47       |0x47       |0x47       |blood           |Blood Falcon
+-s     |0x48   |0x48       |0x48       |0x48       |exfighter48     |ExFighter0x48 // Slot ID is reserved for Pokémon Trainer in single player modes
+-s     |0x49   |0x49       |0x49       |0x49       |exfighter49     |ExFighter0x49 // Slot ID is reserved for Samus/Zero Suit Samus in single player modes
+-s     |0x4A   |0x4A       |0x4A       |0x4A       |exfighter4A     |ExFighter0x4A // Slot ID is reserved for Zelda/Sheik in single player modes
+       |0x4B   |0x4B       |0x4B       |0x4B       |lucina          |Lucina
+       |0x4C   |0x4C       |0x4C       |0x4C       |drluigi         |Dr. Luigi
+       |0x4D   |0x4D       |0x4D       |0x4D       |shadow          |Shadow
+       |0x4E   |0x4E       |0x4E       |0x4E       |nu              |Nu-13
+       |0x4F   |0x4F       |0x4F       |0x4F       |cloud           |Cloud
+       |0x50   |0x50       |0x50       |0x50       |pitb            |Dark Pit
+       |0x51   |0x51       |0x51       |0x51       |Sukapon         |Sukapon
+       |0x52   |0x52       |0x52       |0x52       |ryu             |Ryu
+       |0x53   |0x53       |0x53       |0x53       |ninten          |Ninten
+       |0x54   |0x54       |0x54       |0x54       |koopahone       |Dry Bowser
+       |0x55   |0x55       |0x55       |0x55       |geno            |Geno
+       |0x56   |0x56       |0x56       |0x56       |lancer          |Elizabeth
+       |0x57   |0x57       |0x57       |0x57       |navarre         |Navarre
+       |0x58   |0x58       |0x58       |0x58       |alph            |Alph
+       |0x59   |0x59       |0x59       |0x59       |chrom           |Chrom
+       |0x5A   |0x5A       |0x5A       |0x5A       |shulk           |Shulk
+       |0x5B   |0x5B       |0x5B       |0x5B       |yu              |Yu
+       |0x5C   |0x5C       |0x5C       |0x5C       |squall          |Squall
+       |0x5D   |0x5D       |0x5D       |0x5D       |toonzelda       |Toon Zelda
+       |0x5E   |0x5E       |0x5E       |0x5E       |daisy           |Daisy
+       |0x5F   |0x5F       |0x5F       |0x5F       |kjoe            |Knuckle Joe
+       |0x60   |0x60       |0x60       |0x60       |louie           |Louie
+       |0x61   |0x61       |0x61       |0x61       |kamui           |Corrin (Female)
+       |0x62   |0x62       |0x62       |0x62       |sephiroth       |Sephiroth
+       |0x63   |0x63       |0x63       |0x63       |littlemac       |Little Mac
+       |0x64   |0x64       |0x64       |0x64       |pacman          |Pac-Man
+       |0x65   |0x65       |0x65       |0x65       |kinopio         |Toad
+       |0x66   |0x66       |0x66       |0x66       |bursyamo        |Blaziken
+       |0x67   |0x67       |0x67       |0x67       |zero            |Zero
+       |0x68   |0x68       |0x68       |0x68       |blackknight     |Black Knight
+       |0x69   |0x69       |0x69       |0x69       |maskedman       |Masked Man
+       |0x6A   |0x6A       |0x6A       |0x6A       |zakored         |Red Alloy / Alloy Team
+       |0x6B   |0x6B       |0x6B       |0x6B       |zakoblue        |Blue Alloy
+       |0x6C   |0x6C       |0x6C       |0x6C       |zakoyellow      |Yellow Alloy
+       |0x6D   |0x6D       |0x6D       |0x6D       |zakogreen       |Green Alloy
+       |0x6E   |0x6E       |0x6E       |0x6E       |reflet          |Robin (Male)
+       |0x6F   |0x6F       |0x6F       |0x6F       |sans            |Sans
+       |0x70   |0x70       |0x70       |0x70       |shizue          |Isabelle
+       |0x71   |0x71       |0x71       |0x71       |palutena        |Palutena
+       |0x72   |0x72       |0x72       |0x72       |zeraora         |Zeraora
+       |0x73   |0x73       |0x73       |0x73       |tails           |Tails
+       |0x74   |0x74       |0x74       |0x74       |waddle          |Bandana Waddle Dee
+       |0x75   |0x75       |0x75       |0x75       |subzero         |Sub-Zero
+       |0x76   |0x76       |0x76       |0x76       |sandbag         |Sandbag
+       |0x77   |0x77       |0x77       |0x77       |simon           |Simon Belmont
+       |0x78   |0x78       |0x78       |0x78       |richter         |Richter Belmont
+       |0x79   |0x79       |0x79       |0x79       |blackshadow     |Black Shadow
+       |0x7A   |0x7A       |0x7A       |0x7A       |metalface       |Metal Face
+       |0x7B   |0x7B       |0x7B       |0x7B       |terry           |Terry
+       |0x7C   |0x7C       |0x7C       |0x7C       |onilink         |Fierce Deity
+       |0x7D   |0x7D       |0x7D       |0x7D       |joker           |Joker
+       |0x7E   |0x7E       |0x7E       |0x7E       |vectorman       |VectorMan
+       |0x7F   |0x7F       |0x7F       |0x7F       |wiifit          |Wii Fit Trainer
+       |0x80   |0x80       |0x80       |0x80       |szerosuitheels  |!Modern Zero Suit Samus
+       |0x81   |0x81       |0x81       |0x81       |reflet-f        |Robin (Female)
+       |0x82   |0x82       |0x82       |0x82       |kamui-m         |Corrin (Male)
+       |0x84   |0x84       |0x84       |0x84       |lucinaecho      |!Modern Lucina
+       |0x85   |0x85       |0x85       |0x85       |deathborn       |Deathborn
+       |0x86   |0x86       |0x86       |0x86       |hero            |Hero
+       |0x88   |0x88       |0x88       |0x88       |wolfspecial     |!Ult Wolf
+       |0x89   |0x89       |0x89       |0x89       |hikari          |Mythra
+       |0x8A   |0x8A       |0x8A       |0x8A       |supersonic      |Super Sonic
+       |0x8E   |0x8E       |0x8E       |0x8E       |homura          |Pyra
+       |0x91   |0x91       |0x91       |0x91       |banjokazui      |Banjo & Kazooie
+       |0x94   |0x94       |0x94       |0x94       |lizardonmega    |Mega Charizard X
+       |0x95   |0x95       |0x95       |0x95       |royspecial      |!Ult Roy
+       |0x99   |0x99       |0x99       |0x99       |gkoopahone      |Giga Dry Bowser
+       |0x9A   |0x9A       |0x9A       |0x9A       |bayonetta       |Bayonetta
+       |0x9B   |0x9B       |0x9B       |0x9B       |brawlmk         |Brawl Meta Knight
+       |0x9C   |0x9C       |0x9C       |0x9C       |gpurin          |Big Jigglypuff
+       |0x9D   |0x9D       |0x9D       |0x9D       |silver          |Silver
+       |0x9F   |0x9F       |0x9F       |0x9F       |mewtwomega      |Mega Mewtwo Y
+       |0xA1   |0xA1       |0xA1       |0xA1       |metalmario      |Metal Mario
+       |0xA2   |0xA2       |0xA2       |0xA2       |sora            |Sora
+       |0xA3   |0xA3       |0xA3       |0xA3       |lucariomega     |Mega Lucario
+       |0xA4   |0xA4       |0xA4       |0xA4       |swordganon      |Sword Ganondorf
+       |0xA5   |0xA5       |0xA5       |0xA5       |ssuitless       |Suitless Samus
+       |0xA6   |0xA6       |0xA6       |0xA6       |giantdk         |Giant Donkey Kong
+       |0xA7   |0xA7       |0xA7       |0xA7       |falcospecial    |Ultimate Falco
+       |0xA8   |0xA8       |0xA8       |0xA8       |lucasspecial    |Ultimate Lucas
+       |0xA9   |0xA9       |0xA9       |0xA9       |wiifit-m        |Male Wii Fit Trainer
